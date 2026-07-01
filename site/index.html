@@ -468,17 +468,41 @@
     el.stop=function(){ if(el._t){clearInterval(el._t); el._t=null;} img.src=srcs["closed"]; };
     /* hero Ava stays still by request — companions animate on click only */
   });
+
+  /* ── per-companion voices: own script + own voice (browser speech = free) ── */
+  var SPEAKERS={
+    Ava:  {line:"Hi, I'm Ava. Ready to watch your favorite show? Just tap the picture, and I'll start it for you.", pitch:1.0, rate:0.95, g:'f', pref:['samantha','aria','jenny','google us english','victoria']},
+    Sunny:{line:"Hi friend! I'm Sunny! You did it — yay! Let's try the next one together!",                 pitch:1.5, rate:1.06, g:'f', pref:['karen','victoria','zira']},
+    Alex: {line:"Hello, I'm Alex. Let's get you connected. Tap the green button, and you'll be all set.",        pitch:0.85,rate:1.0,  g:'m', pref:['daniel','google uk english male','alex','david','guy']},
+    Buzz: {line:"Hey! Buzz here. Is the app being silly again? Don't worry — I'll sort it out, no sweat.",    pitch:1.15,rate:1.1,  g:'m', pref:['fred','rishi','arthur']},
+    Grace:{line:"Hello dear, I'm Grace. There's no rush at all. We'll take this one gentle step at a time.",     pitch:0.95,rate:0.82, g:'f', pref:['moira','tessa','fiona','susan']}
+  };
+  function atVoices(){ try{ return window.speechSynthesis.getVoices()||[]; }catch(e){ return []; } }
+  try{ if(window.speechSynthesis){ atVoices(); window.speechSynthesis.onvoiceschanged=atVoices; } }catch(e){}
+  function pickVoice(cfg){
+    var vs=atVoices().filter(function(v){ return /^en/i.test(v.lang); });
+    if(!vs.length) return null;
+    for(var i=0;i<(cfg.pref||[]).length;i++){ var p=cfg.pref[i];
+      var m=vs.find(function(v){ return v.name.toLowerCase().indexOf(p)>-1; }); if(m) return m; }
+    var fem=/female|samantha|victoria|karen|moira|tessa|fiona|susan|aria|jenny/i;
+    var mal=/\bmale\b|daniel|alex|fred|david|guy|rishi|arthur/i;
+    return vs.find(function(v){ return (cfg.g==='f'?fem:mal).test(v.name); }) || vs[0];
+  }
   window.atSpeak=function(btn){
     var card=btn.closest("[data-companion-card]"); if(!card)return;
     var av=card.querySelector(".at-ava"), name=btn.dataset.name||"";
+    var cfg=SPEAKERS[name] || {line:"Hi, I'm "+name+". I'm here with you.", pitch:1, rate:1, g:'f'};
     if(av) av.play();
     var spoke=false;
     try{ if(window.speechSynthesis){ speechSynthesis.cancel();
-      var u=new SpeechSynthesisUtterance("Hi, I'm "+name+". I'm here with you.");
+      var u=new SpeechSynthesisUtterance(cfg.line);
+      var v=pickVoice(cfg); if(v){ u.voice=v; u.lang=v.lang; } else { u.lang='en-US'; }
+      u.pitch=cfg.pitch; u.rate=cfg.rate;
       u.onend=function(){ if(av) av.stop(); }; u.onerror=function(){ if(av) setTimeout(av.stop,3200); };
       speechSynthesis.speak(u); spoke=true; } }catch(e){}
-    if(!spoke && av) setTimeout(av.stop,3400);
+    if(!spoke && av) setTimeout(av.stop,3600);
   };
+
   window.atSubmit=function(ev){
     ev.preventDefault(); var form=ev.target;
     var wrap=form.closest("[data-formwrap]");
