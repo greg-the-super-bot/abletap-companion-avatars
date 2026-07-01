@@ -1,1 +1,10 @@
-²ø1šYì
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6B4CE0"/><stop offset=".55" stop-color="#8A5BE6"/><stop offset="1" stop-color="#F5926A"/></linearGradient>
+    <filter id="ws" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="0" dy="0" stdDeviation="1.15" flood-color="#FFFFFF" flood-opacity="0.9"/></filter>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#g)"/>
+  <circle cx="32" cy="32" r="23" fill="none" stroke="#FAF5EF" stroke-opacity=".20" stroke-width="2.4"/>
+  <circle cx="32" cy="32" r="15.5" fill="none" stroke="#FAF5EF" stroke-opacity=".26" stroke-width="2.4"/>
+  <text x="32" y="42.6" text-anchor="middle" fill="#1C1430" filter="url(#ws)" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="31" letter-spacing="-1.5">AT</text>
+</svg>
