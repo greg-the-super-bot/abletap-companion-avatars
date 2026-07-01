@@ -3,7 +3,7 @@
   "generatedAt": "2026-06-30",
   "runtimeCostForArtAnimation": 0,
   "roster": "locked-five",
-  "productionStatus": "visual-review",
+  "productionStatus": "visual-approved",
   "characters": [
     {"id":"ava","name":"Ava","role":"calm default","accent":"#6B4CE0","master":"assets/masters/ava.png","mouthRig":"proof-passed","mouthRigPath":"assets/companion-mouth-test/rig/ava"},
     {"id":"sunny","name":"Sunny","role":"bright and upbeat","accent":"#F4B96B","master":"assets/masters/sunny.png","mouthRig":"proof-passed","mouthRigPath":"assets/companion-mouth-test/rig/sunny"},

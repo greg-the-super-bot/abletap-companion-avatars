@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>AbleTap companions — talking review</title>
+<style>
+  :root{color-scheme:light; font-family:ui-rounded,system-ui,sans-serif; background:#f8f4ec; color:#211f1b;}
+  *{box-sizing:border-box;}
+  body{margin:0; padding:34px 20px 64px;}
+  main{max-width:1120px; margin:auto;}
+  h1{font-size:clamp(1.8rem,4vw,2.8rem); margin:0 0 8px;}
+  .note{max-width:800px; margin:0 0 20px; line-height:1.55; color:#4a453c;}
+  .bar{display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin:0 0 26px;}
+  .btn{border:0; border-radius:14px; background:#211f1b; color:#fff; font:inherit; font-weight:750; padding:13px 20px; cursor:pointer; min-height:48px;}
+  .btn.alt{background:#fff; color:#211f1b; box-shadow:0 4px 16px #2b241b1a;}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:20px;}
+  .card{background:#fff; border:3px solid transparent; border-radius:24px; padding:14px 14px 18px; text-align:center; box-shadow:0 10px 28px #2b241b18; cursor:pointer;}
+  .card[data-on="1"]{border-color:var(--accent);}
+  .portrait{display:block; width:100%; aspect-ratio:1; border-radius:18px; overflow:hidden; background:#eee;}
+  .portrait img{width:100%; height:100%; display:block;}
+  .name{display:block; font-size:1.25rem; font-weight:750; margin-top:10px;}
+  .role{display:block; opacity:.72; margin-top:2px; font-size:.95rem;}
+  .state{display:block; margin-top:6px; font-size:.8rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--accent);}
+  @media (prefers-reduced-motion:reduce){ /* JS lowers fps when set */ }
+</style>
+</head>
+<body>
+<main>
+  <h1>Your companions — talking</h1>
+  <p class="note">These are the <strong>real mouth-rig frames</strong> (closed · micro · small · open · o · smile) flip-booked in a gentle speaking loop — no voice service, no per-minute cost. It animates on its own; click any face to pause/resume it, or use the buttons. This is the "does it look alive?" check.</p>
+  <div class="bar">
+    <button class="btn" id="toggleAll">Pause all</button>
+    <button class="btn alt" id="slow">Slower</button>
+    <button class="btn alt" id="fast">Faster</button>
+    <span id="fps" style="font-weight:700;"></span>
+  </div>
+  <section class="grid" id="grid" aria-label="Companions talking"></section>
+</main>
+<script>
+const BASE = "../assets/companion-mouth-test/rig";
+const companions = [
+  ["ava","Ava","calm default","#6B4CE0"],
+  ["sunny","Sunny","bright and upbeat","#F4B96B"],
+  ["alex","Alex","steady professional","#F5926A"],
+  ["buzz","Buzz","friendly and upbeat","#2E9C84"],
+  ["grace","Grace","gentle","#8D6BD8"]
+];
+const LOOP = ["closed","micro","small","open","small","micro","o","micro","small","smile","closed","closed"];
+let fps = 9, timer = null;
+const cards = [];
+const grid = document.getElementById("grid");
+
+for (const [id,name,role,accent] of companions){
+  const card = document.createElement("div");
+  card.className = "card"; card.style.setProperty("--accent",accent); card.dataset.on = "1";
+  card.innerHTML = `<span class="portrait"><img alt="${name}"></span>
+    <span class="name">${name}</span><span class="role">${role}</span>
+    <span class="state">talking</span>`;
+  const img = card.querySelector("img");
+  // preload the 6 frames
+  const frames = {};
+  ["closed","micro","small","open","o","smile"].forEach(f=>{
+    const im = new Image(); im.src = `${BASE}/${id}/${f}.png`; frames[f]=im.src;
+  });
+  img.src = frames["closed"];
+  const obj = {id,name,card,img,frames,state:card.querySelector(".state"),i:0,on:true};
+  card.addEventListener("click",()=>setOne(obj,!obj.on));
+  cards.push(obj); grid.append(card);
+}
+function setOne(o,on){
+  o.on = on; o.card.dataset.on = on?"1":"0";
+  o.state.textContent = on?"talking":"paused";
+  if(!on) o.img.src = o.frames["closed"];
+}
+function tick(){
+  for(const o of cards){
+    if(!o.on) continue;
+    o.i = (o.i+1) % LOOP.length;
+    o.img.src = o.frames[LOOP[o.i]];
+  }
+}
+function restart(){ if(timer) clearInterval(timer); timer=setInterval(tick, 1000/fps); document.getElementById("fps").textContent = fps+" fps"; }
+if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) fps = 5;
+restart();
+document.getElementById("toggleAll").addEventListener("click",e=>{
+  const anyOn = cards.some(o=>o.on); cards.forEach(o=>setOne(o,!anyOn));
+  e.target.textContent = anyOn ? "Play all" : "Pause all";
+});
+document.getElementById("slow").addEventListener("click",()=>{ fps=Math.max(3,fps-2); restart(); });
+document.getElementById("fast").addEventListener("click",()=>{ fps=Math.min(15,fps+2); restart(); });
+</script>
+</body>
+</html>
