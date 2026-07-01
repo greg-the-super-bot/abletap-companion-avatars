@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>AbleTap companion mouth rigs</title>
+  <style>
+    :root { font-family:ui-rounded,system-ui,sans-serif; color:#211f1b; background:#f8f4ec; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:28px 18px 48px; }
+    main { max-width:820px; margin:auto; }
+    h1 { margin:0 0 8px; font-size:clamp(1.8rem,5vw,3rem); }
+    p { line-height:1.5; }
+    .characters,.states { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:18px 0; }
+    .stage { width:min(100%,560px); margin:20px auto; border-radius:32px; overflow:hidden; box-shadow:0 18px 48px #2b241b25; background:white; }
+    .stage img { display:block; width:100%; aspect-ratio:1; }
+    .label { text-align:center; font-size:1.2rem; font-weight:750; padding:12px; background:white; }
+    button { min-height:50px; padding:11px 16px; border:2px solid var(--accent,#6B4CE0); border-radius:14px; color:#31225f; background:white; font:inherit; font-weight:750; cursor:pointer; }
+    button[aria-pressed="true"],button.primary { color:white; background:var(--accent,#6B4CE0); }
+    button:focus-visible { outline:4px solid #c8b9ff; outline-offset:2px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Companion mouth-rig review</h1>
+  <p>Every frame uses the untouched approved portrait plus a feathered mouth-only overlay. The gentle loop uses micro and small transitions so speech does not jump sharply.</p>
+  <div class="characters" id="characters" aria-label="Choose companion"></div>
+  <div class="stage">
+    <img id="portrait" alt="Ava demonstrating the closed mouth shape">
+    <div class="label" id="label" aria-live="polite">Ava — closed</div>
+  </div>
+  <div class="states" id="states" aria-label="Choose mouth shape"></div>
+  <p style="text-align:center"><button class="primary" id="cycle">Play gentle speaking loop</button></p>
+</main>
+<script>
+const people = {
+  ava: ['Ava','#6B4CE0'], sunny: ['Sunny','#F4B96B'], alex: ['Alex','#F5926A'],
+  buzz: ['Buzz','#2E9C84'], grace: ['Grace','#8D6BD8']
+};
+const states = ['closed','micro','small','open','o','smile'];
+const cycleStates = ['closed','micro','small','open','small','micro','o','micro','small','smile'];
+const image = document.querySelector('#portrait');
+const label = document.querySelector('#label');
+let selected = 'ava'; let timer;
+function show(state) {
+  clearTimeout(timer);
+  const name = people[selected][0];
+  image.src = `../assets/companion-mouth-test/rig/${selected}/${state}.png`;
+  image.alt = `${name} demonstrating the ${state} mouth shape`;
+  label.textContent = `${name} — ${state}`;
+}
+for (const [id,[name,accent]] of Object.entries(people)) {
+  const button = document.createElement('button');
+  button.textContent = name; button.dataset.person = id; button.style.setProperty('--accent',accent);
+  button.setAttribute('aria-pressed', String(id === selected));
+  button.addEventListener('click', () => {
+    selected = id;
+    document.querySelectorAll('[data-person]').forEach(el => el.setAttribute('aria-pressed', String(el === button)));
+    document.querySelectorAll('button').forEach(el => el.style.setProperty('--accent',accent));
+    show('closed');
+  });
+  document.querySelector('#characters').append(button);
+}
+for (const state of states) {
+  const button = document.createElement('button');
+  button.textContent = state; button.addEventListener('click', () => show(state));
+  document.querySelector('#states').append(button);
+}
+document.querySelector('#cycle').addEventListener('click', () => {
+  clearTimeout(timer); let index = 0;
+  const next = () => {
+    const state = cycleStates[index % cycleStates.length];
+    const name = people[selected][0];
+    image.src = `../assets/companion-mouth-test/rig/${selected}/${state}.png`;
+    image.alt = `${name} demonstrating the ${state} mouth shape`;
+    label.textContent = `${name} — ${state}`;
+    index += 1;
+    timer = setTimeout(next, state === 'closed' || state === 'smile' ? 550 : 100);
+  };
+  next();
+});
+show('closed');
+</script>
+</body>
+</html>

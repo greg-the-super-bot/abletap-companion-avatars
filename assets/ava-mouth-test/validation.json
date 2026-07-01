@@ -1,0 +1,184 @@
+{
+  "base": "assets/masters/ava.png",
+  "canvas": [
+    1254,
+    1254
+  ],
+  "mouthBBox": [
+    500,
+    650,
+    760,
+    850
+  ],
+  "featherRadius": 12,
+  "states": {
+    "micro": {
+      "rawEdit": {
+        "outsideChangedPixels": 1497497,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 99.4739,
+        "outsideMeanAbsoluteChannelDelta": 4.0392,
+        "fullDifferenceBBox": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "maskedComposite": {
+        "outsideChangedPixels": 0,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 0.0,
+        "outsideMeanAbsoluteChannelDelta": 0.0,
+        "fullDifferenceBBox": [
+          480,
+          630,
+          779,
+          866
+        ]
+      },
+      "overlay": "assets/ava-mouth-test/overlays/ava-micro-overlay.png",
+      "frame": "assets/ava-mouth-test/rig/ava-micro.png"
+    },
+    "small": {
+      "rawEdit": {
+        "outsideChangedPixels": 1497537,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 99.4766,
+        "outsideMeanAbsoluteChannelDelta": 3.8549,
+        "fullDifferenceBBox": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "maskedComposite": {
+        "outsideChangedPixels": 0,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 0.0,
+        "outsideMeanAbsoluteChannelDelta": 0.0,
+        "fullDifferenceBBox": [
+          478,
+          630,
+          781,
+          872
+        ]
+      },
+      "overlay": "assets/ava-mouth-test/overlays/ava-small-overlay.png",
+      "frame": "assets/ava-mouth-test/rig/ava-small.png"
+    },
+    "open": {
+      "rawEdit": {
+        "outsideChangedPixels": 1497203,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 99.4544,
+        "outsideMeanAbsoluteChannelDelta": 4.253,
+        "fullDifferenceBBox": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "maskedComposite": {
+        "outsideChangedPixels": 0,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 0.0,
+        "outsideMeanAbsoluteChannelDelta": 0.0,
+        "fullDifferenceBBox": [
+          480,
+          630,
+          777,
+          867
+        ]
+      },
+      "overlay": "assets/ava-mouth-test/overlays/ava-open-overlay.png",
+      "frame": "assets/ava-mouth-test/rig/ava-open.png"
+    },
+    "wide": {
+      "rawEdit": {
+        "outsideChangedPixels": 1496420,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 99.4024,
+        "outsideMeanAbsoluteChannelDelta": 3.7531,
+        "fullDifferenceBBox": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "maskedComposite": {
+        "outsideChangedPixels": 0,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 0.0,
+        "outsideMeanAbsoluteChannelDelta": 0.0,
+        "fullDifferenceBBox": [
+          474,
+          630,
+          785,
+          879
+        ]
+      },
+      "overlay": "assets/ava-mouth-test/overlays/ava-wide-overlay.png",
+      "frame": "assets/ava-mouth-test/rig/ava-wide.png"
+    },
+    "o": {
+      "rawEdit": {
+        "outsideChangedPixels": 1497097,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 99.4473,
+        "outsideMeanAbsoluteChannelDelta": 4.201,
+        "fullDifferenceBBox": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "maskedComposite": {
+        "outsideChangedPixels": 0,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 0.0,
+        "outsideMeanAbsoluteChannelDelta": 0.0,
+        "fullDifferenceBBox": [
+          478,
+          628,
+          785,
+          876
+        ]
+      },
+      "overlay": "assets/ava-mouth-test/overlays/ava-o-overlay.png",
+      "frame": "assets/ava-mouth-test/rig/ava-o.png"
+    },
+    "smile": {
+      "rawEdit": {
+        "outsideChangedPixels": 1497349,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 99.4641,
+        "outsideMeanAbsoluteChannelDelta": 3.8858,
+        "fullDifferenceBBox": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "maskedComposite": {
+        "outsideChangedPixels": 0,
+        "outsidePixelCount": 1505417,
+        "outsideChangedPercent": 0.0,
+        "outsideMeanAbsoluteChannelDelta": 0.0,
+        "fullDifferenceBBox": [
+          484,
+          630,
+          780,
+          866
+        ]
+      },
+      "overlay": "assets/ava-mouth-test/overlays/ava-smile-overlay.png",
+      "frame": "assets/ava-mouth-test/rig/ava-smile.png"
+    }
+  }
+}

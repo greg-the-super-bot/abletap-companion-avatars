@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>Ava mouth-rig proof</title>
+  <style>
+    :root { font-family:ui-rounded,system-ui,sans-serif; color:#211f1b; background:#f8f4ec; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:28px 18px 48px; }
+    main { max-width:760px; margin:auto; }
+    h1 { margin:0 0 8px; font-size:clamp(1.8rem,5vw,3rem); }
+    p { line-height:1.5; }
+    .stage { width:min(100%,560px); margin:24px auto; border-radius:32px; overflow:hidden; box-shadow:0 18px 48px #2b241b25; background:white; }
+    .stage img { display:block; width:100%; aspect-ratio:1; }
+    .state { text-align:center; font-size:1.2rem; font-weight:750; padding:12px; background:white; }
+    .controls { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    button { min-height:52px; padding:12px 17px; border:2px solid #6B4CE0; border-radius:14px; color:#31225f; background:white; font:inherit; font-weight:750; cursor:pointer; }
+    button.primary { color:white; background:#6B4CE0; }
+    button:focus-visible { outline:4px solid #c8b9ff; outline-offset:2px; }
+    code { font-size:.95em; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Ava cheap-talking proof</h1>
+  <p>These are full-canvas frames built from the untouched approved base plus a feathered mouth-only overlay. Pixels outside the mouth mask are identical to the approved base. The normal loop uses two intermediate poses and excludes the exaggerated wide-open stress-test frame.</p>
+  <div class="stage">
+    <img id="ava" src="../assets/ava-mouth-test/rig/ava-closed.png" alt="Ava demonstrating a closed mouth shape">
+    <div class="state" id="state" aria-live="polite">closed</div>
+  </div>
+  <div class="controls" id="controls"></div>
+  <p><button class="primary" id="cycle">Play gentle speaking loop</button></p>
+</main>
+<script>
+const states = ['closed','micro','small','open','o','smile'];
+const cycle = ['closed','micro','small','open','small','micro','o','micro','small','smile'];
+const image = document.querySelector('#ava');
+const label = document.querySelector('#state');
+const controls = document.querySelector('#controls');
+let timer;
+function show(state) {
+  clearTimeout(timer);
+  image.src = `../assets/ava-mouth-test/rig/ava-${state}.png`;
+  image.alt = `Ava demonstrating the ${state} mouth shape`;
+  label.textContent = state;
+}
+for (const state of states) {
+  const button = document.createElement('button');
+  button.textContent = state;
+  button.addEventListener('click', () => show(state));
+  controls.append(button);
+}
+document.querySelector('#cycle').addEventListener('click', () => {
+  clearTimeout(timer);
+  let index = 0;
+  const next = () => {
+    const state = cycle[index % cycle.length];
+    image.src = `../assets/ava-mouth-test/rig/ava-${state}.png`;
+    image.alt = `Ava demonstrating the ${state} mouth shape`;
+    label.textContent = state;
+    index += 1;
+    timer = setTimeout(next, state === 'closed' || state === 'smile' ? 550 : 100);
+  };
+  next();
+});
+</script>
+</body>
+</html>

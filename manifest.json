@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-30",
+  "runtimeCostForArtAnimation": 0,
+  "roster": "locked-five",
+  "productionStatus": "visual-review",
+  "characters": [
+    {"id":"ava","name":"Ava","role":"calm default","accent":"#6B4CE0","master":"assets/masters/ava.png","mouthRig":"proof-passed","mouthRigPath":"assets/companion-mouth-test/rig/ava"},
+    {"id":"sunny","name":"Sunny","role":"bright and upbeat","accent":"#F4B96B","master":"assets/masters/sunny.png","mouthRig":"proof-passed","mouthRigPath":"assets/companion-mouth-test/rig/sunny"},
+    {"id":"alex","name":"Alex","role":"steady professional","accent":"#F5926A","master":"assets/masters/alex.png","mouthRig":"proof-passed","mouthRigPath":"assets/companion-mouth-test/rig/alex","revision":"male professional, 40s"},
+    {"id":"buzz","name":"Buzz","role":"friendly and upbeat","accent":"#2E9C84","master":"assets/masters/buzz.png","mouthRig":"proof-passed","mouthRigPath":"assets/companion-mouth-test/rig/buzz"},
+    {"id":"grace","name":"Grace","role":"gentle","accent":"#8D6BD8","master":"assets/masters/grace.png","mouthRig":"proof-passed","mouthRigPath":"assets/companion-mouth-test/rig/grace"}
+  ],
+  "requiredMouthShapes": ["closed", "micro-open", "small-open", "open", "o", "smile"],
+  "requiredProductionFormat": "layered source plus transparent pixel-aligned PNG overlays"
+}
