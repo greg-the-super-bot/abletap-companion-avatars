@@ -464,22 +464,49 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
 (function(){
   var FRAMES=["closed","micro","small","open","o","smile"];
   var LOOP=["closed","micro","small","open","small","micro","o","micro","small","smile","closed","closed"];
+  /* Ten logical visemes map onto today's six high-resolution mouth frames.
+     FV/LTH can become dedicated assets later without changing cue timing. */
+  var VISEME_FRAME={rest:"closed",mbp:"closed",fv:"small",lth:"small",ee:"smile",ih:"small",ah:"open",oh:"o",uw:"o",smile:"smile"};
   var base="assets/companions/";
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll(".at-ava").forEach(function(el){
     var c=el.dataset.c, img=el.querySelector("img"), srcs={};
     FRAMES.forEach(function(f){ var im=new Image(); im.src=base+c+"/"+f+".png"; srcs[f]=im.src; });
-    img.src=srcs["closed"]; el._i=0; el._t=null;
-    el.play=function(dur){ if(el._t||reduce)return; el._t=setInterval(function(){ el._i=(el._i+1)%LOOP.length; img.src=srcs[LOOP[el._i]]; },111); if(dur){ setTimeout(el.stop,dur); } };
-    el.stop=function(){ if(el._t){clearInterval(el._t); el._t=null;} img.src=srcs["closed"]; };
+    img.src=srcs["closed"]; el._i=0; el._t=null; el._raf=null; el._frame="closed";
+    el._show=function(frame){ if(frame!==el._frame && srcs[frame]){ img.src=srcs[frame]; el._frame=frame; } };
+    el.playFallback=function(){
+      if(el._t)return;
+      el._t=setInterval(function(){ el._i=(el._i+1)%LOOP.length; el._show(LOOP[el._i]); },reduce?180:111);
+    };
+    el.playCues=function(audio,cueData){
+      var cues=cueData&&cueData.mouthCues; if(!audio||!cues||!cues.length){el.playFallback();return;}
+      var lookAhead=((cueData.lookAheadMs||75)/1000), index=0, lastPaint=0, minPaint=reduce?100:35;
+      function paint(now){
+        var t=Math.max(0,audio.currentTime+lookAhead);
+        while(index+1<cues.length && cues[index+1].start<=t)index++;
+        while(index>0 && cues[index].start>t)index--;
+        if(now-lastPaint>=minPaint){
+          var cue=cues[index], viseme=(cue&&t>=cue.start&&t<cue.end)?cue.viseme:"rest";
+          el._show(VISEME_FRAME[viseme]||"closed"); lastPaint=now;
+        }
+        if(!audio.paused&&!audio.ended)el._raf=requestAnimationFrame(paint);
+      }
+      el._raf=requestAnimationFrame(paint);
+    };
+    el.stop=function(){
+      if(el._t){clearInterval(el._t);el._t=null;}
+      if(el._raf){cancelAnimationFrame(el._raf);el._raf=null;}
+      el._show("closed");
+    };
     /* hero Ava stays still by request — companions animate on click only */
   });
 
   /* ── real agent voices: pre-rendered ElevenLabs MP3s (static = free to serve) ── */
   var AUDIO_BASE="assets/companions/audio/";
-  var AUDIO={};
+  var AUDIO={}, CUES={}, CUE_LOADS={};
   ["ava","sunny","alex","buzz","grace"].forEach(function(k){
     try{ var a=new Audio(AUDIO_BASE+k+".mp3"); a.preload="auto"; AUDIO[k]=a; }catch(e){}
+    CUE_LOADS[k]=fetch(AUDIO_BASE+"cues/"+k+".json").then(function(r){if(!r.ok)throw new Error("cue load");return r.json();}).then(function(data){CUES[k]=data;return data;}).catch(function(){return null;});
   });
   var atAv=null, atCur=null;
   function atStop(){
@@ -500,6 +527,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
   function atFallback(name,av,done){
     var cfg=SPEAKERS[name]||{line:"Hi, I'm "+name+".",pitch:1,rate:1,g:'f'};
     var spoke=false;
+    if(av)av.playFallback();
     try{ if(window.speechSynthesis){ speechSynthesis.cancel();
       var u=new SpeechSynthesisUtterance(cfg.line); u.pitch=cfg.pitch; u.rate=cfg.rate;
       u.onend=done; u.onerror=function(){ setTimeout(done,3000); };
@@ -511,15 +539,22 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
     var card=btn.closest("[data-companion-card]"); if(!card)return;
     var av=card.querySelector(".at-ava"), name=(btn.dataset.name||""), key=name.toLowerCase();
     atStop();
-    if(av){ av.play(); atAv=av; }
+    if(av){ atAv=av; }
     var done=function(){ if(av) av.stop(); if(atAv===av) atAv=null; };
     var a=AUDIO[key];
     if(a){
       try{ a.currentTime=0; }catch(e){}
       atCur=a; a.onended=done; a.onerror=function(){ atFallback(name,av,done); };
+      var startMouth=function(){
+        if(!av||atCur!==a)return;
+        if(CUES[key])av.playCues(a,CUES[key]);
+        else CUE_LOADS[key].then(function(data){if(atCur===a&&av){av.stop();av.playCues(a,data);}});
+      };
       var pr=a.play();
-      if(pr && pr.catch){ pr.catch(function(){ atFallback(name,av,done); }); }
+      if(pr&&pr.then){ pr.then(startMouth).catch(function(){if(av)av.stop();atFallback(name,av,done);}); }
+      else startMouth();
     } else {
+      if(av)av.playFallback();
       atFallback(name,av,done);
     }
   };
