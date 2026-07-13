@@ -469,6 +469,9 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
   var VISEME_FRAME={rest:"closed",mbp:"closed",fv:"small",lth:"small",ee:"smile",ih:"small",ah:"open",oh:"o",uw:"o",smile:"smile"};
   var base="assets/companions/";
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* Preview tuning: ?lookahead=110 (milliseconds). Production default is 130. */
+  var lookAheadParam=parseInt(new URLSearchParams(location.search).get("lookahead"),10);
+  var LOOK_AHEAD_MS=Number.isFinite(lookAheadParam)?Math.max(40,Math.min(220,lookAheadParam)):130;
   document.querySelectorAll(".at-ava").forEach(function(el){
     var c=el.dataset.c, img=el.querySelector("img"), srcs={};
     FRAMES.forEach(function(f){ var im=new Image(); im.src=base+c+"/"+f+".png"; srcs[f]=im.src; });
@@ -480,7 +483,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
     };
     el.playCues=function(audio,cueData){
       var cues=cueData&&cueData.mouthCues; if(!audio||!cues||!cues.length){el.playFallback();return;}
-      var lookAhead=((cueData.lookAheadMs||75)/1000), index=0, lastPaint=0, minPaint=reduce?100:35;
+      var lookAhead=(LOOK_AHEAD_MS/1000), index=0, lastPaint=0, minPaint=reduce?100:35;
       function paint(now){
         var t=Math.max(0,audio.currentTime+lookAhead);
         while(index+1<cues.length && cues[index+1].start<=t)index++;

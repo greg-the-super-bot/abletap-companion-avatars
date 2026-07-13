@@ -85,7 +85,7 @@ def generate(name: str, rhubarb: Path) -> dict:
         "companion": name,
         "audio": f"../{name}.mp3",
         "duration": round(float(result["metadata"]["duration"]), 3),
-        "lookAheadMs": 75,
+        "lookAheadMs": 130,
         "mouthCues": cues,
     }
 
