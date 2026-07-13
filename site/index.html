@@ -466,12 +466,12 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
   var LOOP=["closed","micro","small","open","small","micro","o","micro","small","smile","closed","closed"];
   /* Ten logical visemes map onto today's six high-resolution mouth frames.
      FV/LTH can become dedicated assets later without changing cue timing. */
-  var VISEME_FRAME={rest:"closed",mbp:"closed",fv:"small",lth:"small",ee:"smile",ih:"small",ah:"open",oh:"o",uw:"o",smile:"smile"};
+  var VISEME_FRAME={rest:"closed",mbp:"closed",fv:"micro",lth:"micro",ee:"small",ih:"micro",ah:"open",oh:"o",uw:"o",smile:"smile"};
   var base="assets/companions/";
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
-  /* Preview tuning: ?lookahead=110 (milliseconds). Production default is 130. */
+  /* Preview tuning: ?lookahead=160 (milliseconds). Production default is 160. */
   var lookAheadParam=parseInt(new URLSearchParams(location.search).get("lookahead"),10);
-  var LOOK_AHEAD_MS=Number.isFinite(lookAheadParam)?Math.max(40,Math.min(220,lookAheadParam)):130;
+  var LOOK_AHEAD_MS=Number.isFinite(lookAheadParam)?Math.max(40,Math.min(220,lookAheadParam)):160;
   document.querySelectorAll(".at-ava").forEach(function(el){
     var c=el.dataset.c, img=el.querySelector("img"), srcs={};
     FRAMES.forEach(function(f){ var im=new Image(); im.src=base+c+"/"+f+".png"; srcs[f]=im.src; });
@@ -483,14 +483,22 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
     };
     el.playCues=function(audio,cueData){
       var cues=cueData&&cueData.mouthCues; if(!audio||!cues||!cues.length){el.playFallback();return;}
-      var lookAhead=(LOOK_AHEAD_MS/1000), index=0, lastPaint=0, minPaint=reduce?100:35;
+      var lookAhead=(LOOK_AHEAD_MS/1000), index=0, lastPaint=0, minPaint=reduce?120:55;
+      function frameFor(cue){
+        if(!cue)return "closed";
+        var duration=cue.end-cue.start;
+        /* Short vowels stay restrained; larger shapes are reserved for held sounds. */
+        if(cue.viseme==="ah"&&duration<0.18)return "small";
+        if((cue.viseme==="oh"||cue.viseme==="uw")&&duration<0.18)return "micro";
+        return VISEME_FRAME[cue.viseme]||"closed";
+      }
       function paint(now){
         var t=Math.max(0,audio.currentTime+lookAhead);
         while(index+1<cues.length && cues[index+1].start<=t)index++;
         while(index>0 && cues[index].start>t)index--;
         if(now-lastPaint>=minPaint){
-          var cue=cues[index], viseme=(cue&&t>=cue.start&&t<cue.end)?cue.viseme:"rest";
-          el._show(VISEME_FRAME[viseme]||"closed"); lastPaint=now;
+          var cue=(cues[index]&&t>=cues[index].start&&t<cues[index].end)?cues[index]:null;
+          el._show(frameFor(cue)); lastPaint=now;
         }
         if(!audio.paused&&!audio.ended)el._raf=requestAnimationFrame(paint);
       }
