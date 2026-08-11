@@ -32,8 +32,9 @@
   </filter>
 </defs>
   <rect width="1024" height="1024" fill="#FAF5EF"/>
+  <rect x="24" y="24" width="976" height="976" rx="188" fill="url(#panel)"/>
   <g transform="translate(0 28)">
-  <g>
+  <g filter="url(#tile-shadow)">
     <path d="M177 128H467Q520 128 520 184V456H180Q120 456 120 396V289Q120 128 177 128Z" fill="url(#purple)"/>
     <path d="M600 128H758Q900 128 900 284V398Q900 456 842 456H543V185Q543 128 600 128Z" fill="url(#coral)"/>
     <path d="M180 480H354L520 620L436 852Q427 878 382 878H335Q120 850 120 683V539Q120 480 180 480Z" fill="url(#lilac)"/>
