@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /social/
+Disallow: /brand-kit/
+
+Sitemap: https://abletap.io/sitemap.xml

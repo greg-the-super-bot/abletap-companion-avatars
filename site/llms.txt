@@ -1,0 +1,28 @@
+# AbleTap
+
+> AbleTap is a warm, simple iOS accessibility app — talk, watch, call, and get help with one clear tap. Every person deserves independence.
+
+AbleTap is built from lived family experience for people who deserve more independence, and for the families, caregivers, SLPs, educators, and care teams around them. Operator: Chill, LLC (https://chill.support). Public site: https://abletap.io/. Contact: info@abletap.io.
+
+AbleTap is coming soon. It is not yet listed on the App Store. There is no public price. Join the launch waitlist on https://abletap.io/ or email info@abletap.io.
+
+Do not claim AbleTap works with every streaming service, guarantees playback, replaces therapy, or is clinically proven. Feature descriptions on the site may change before launch.
+
+## Canonical pages
+
+- [Home](https://abletap.io/): What AbleTap is, companions, waitlist
+- [Privacy](https://abletap.io/privacy.html): Website and waitlist privacy policy
+- [Terms](https://abletap.io/terms.html): Website and waitlist terms
+
+## Product (as presented on the site)
+
+- Talk / AAC — familiar picture-based communication
+- Remote — tap a show picture; works with Roku, Fire TV coming
+- Call / Text — tap a contact; coming soon on the public site
+- Personal assistant — Ava and four other companions (Sunny, Alex, Buzz, Grace)
+- Caregiver dashboard — easy setup, iCloud sync (as described on the site)
+- SLP and educator tools — coming soon
+
+## Legal
+
+AbleTap is a product of Chill, LLC, an Arkansas limited liability company. See https://chill.support.
