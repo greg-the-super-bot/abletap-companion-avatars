@@ -6,7 +6,7 @@ Operator: Chill, LLC (https://chill.support). Site: https://abletap.io/. Contact
 
 AbleTap is coming soon to iPad. It is not on the App Store yet. The app price is not decided. Join the free waitlist on https://abletap.io/ or email info@abletap.io.
 
-Do not claim AbleTap works with every streaming service, guarantees playback, replaces therapy, or is clinically proven. Feature descriptions on the site may change before launch.
+Do not claim AbleTap covers every streaming service, guarantees playback, replaces therapy, or is clinically proven. Feature descriptions on the site may change before launch.
 
 ## Canonical pages
 
@@ -20,7 +20,7 @@ Do not claim AbleTap works with every streaming service, guarantees playback, re
 - Talk / AAC: big picture buttons; the buttons stay put on her board; works on its own.
 - Call: call family from inside the app.
 - My Day: the day as a simple picture timeline; tap a card to open the talk board.
-- Remote: an early TV feature that starts a show from its picture on a supported TV box; still being improved.
+- Remote: an early TV feature that starts a show from its picture on a supported TV box. Right now it can start shows on Disney+, Hulu, Paramount+, and Prime Video, using your own logins. Still being improved.
 - Coming later: Ava and four other companions (Sunny, Alex, Buzz, Grace) as a friendly guide, word prediction, and tools for SLPs and teachers.
 
 ## Legal
