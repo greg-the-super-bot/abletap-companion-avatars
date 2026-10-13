@@ -126,6 +126,8 @@
       "#at-consent a:focus,#at-consent button:focus{outline:3px solid #FFFFFF;outline-offset:3px;}",
       "#at-consent-status{margin-top:8px;font-size:.98rem;}",
       "html.at-consent-pad body{padding-bottom:240px;}",
+      "button[data-cookie-choices]{background:transparent;border:0;padding:0;margin:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px;}",
+      "button[data-cookie-choices]:focus{outline:3px solid #6B4CE0;outline-offset:3px;}",
       "@media (forced-colors: active){#at-consent{background:Canvas;color:CanvasText;border:2px solid CanvasText;}#at-consent h2,#at-consent p{color:CanvasText;}#at-consent a{color:LinkText;}#at-consent button{background:ButtonFace;color:ButtonText;border:2px solid ButtonText;}}",
       "@media (prefers-reduced-motion: reduce){#at-consent{transition:none;}}"
     ].join("");
