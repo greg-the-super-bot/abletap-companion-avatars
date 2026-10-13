@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AbleTap — A picture-based AAC app for iPad</title>
+<meta name="description" content="AbleTap is a picture-based AAC app for iPad. Coming soon to iPad. Join the free waitlist.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://abletap.io/early-access/">
+<link rel="icon" href="/favicon.ico?v=20261010" sizes="48x48">
+<link rel="icon" href="/favicon.svg?v=20261010" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png?v=20261010" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png?v=20261010" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20261010" sizes="180x180">
+<link rel="manifest" href="/site.webmanifest?v=20261010">
+<meta name="theme-color" content="#6B3FE0">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="AbleTap">
+<meta property="og:url" content="https://abletap.io/early-access/">
+<meta property="og:title" content="AbleTap — A picture-based AAC app for iPad">
+<meta property="og:description" content="Coming soon to iPad. Join the free waitlist. AbleTap is a picture-based AAC app built by a family for their nonverbal daughter.">
+<meta property="og:image" content="https://abletap.io/favicon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AbleTap — A picture-based AAC app for iPad">
+<meta name="twitter:description" content="Coming soon to iPad. Join the free waitlist.">
+<meta name="twitter:image" content="https://abletap.io/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<script>
+import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init('phc_pDDu5ryB7PhFbassPwTdZXjYvP5afizR76wooJ54t8M6',{api_host:'https://us.i.posthog.com',person_profiles:'identified_only',capture_pageview:true});window.posthog=ph;}).catch(function(){});
+</script>
+<script src="/assets/tracking-config.js"></script>
+<script src="/assets/consent.js"></script>
+<script src="/assets/waitlist.js"></script>
+<style>
+  :root{
+    --bg:#FAF5EF;
+    --ink:#2B2236;
+    --purple:#6B3FE0;
+    --coral:#FF7A57;
+    --lilac:#A86DE8;
+    --teal:#0F9D90;
+    --gold:#F4A429;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(46% 32% at 0% 0%, rgba(107,63,224,.16), transparent 70%),
+      radial-gradient(40% 28% at 100% 8%, rgba(245,146,106,.22), transparent 68%),
+      var(--bg);
+    color:var(--ink);
+    font-family:'Atkinson Hyperlegible',system-ui,sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wash{height:10px;background:linear-gradient(105deg,#6B4CE0,#F5926A 70%);}
+  a{color:var(--purple)}
+  .top{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px clamp(18px,4vw,40px);background:rgba(250,245,239,.92);border-bottom:1px solid rgba(43,34,54,.1);backdrop-filter:blur(14px)}
+  .brand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none}
+  .brand img{width:40px;height:40px;display:block}
+  .word{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.35rem;color:var(--ink)}
+  .soon{font-family:'Atkinson Hyperlegible',system-ui,sans-serif;font-weight:700;font-size:.75rem;letter-spacing:1.1px;text-transform:uppercase;color:var(--purple);background:var(--bg);border:2px solid var(--purple);padding:6px 12px;border-radius:999px}
+  main{max-width:760px;margin:0 auto;padding:48px 22px 80px}
+  .mark-wrap{width:72px;height:72px;margin-bottom:18px}
+  .mark-wrap img{width:72px;height:72px;display:block}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(2.4rem,6vw,3.5rem);line-height:1.05;letter-spacing:-.4px;margin:0 0 16px;color:var(--ink)}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.35rem;line-height:1.2;margin:0 0 8px;color:var(--ink)}
+  p{color:var(--ink)}
+  .lede{font-size:1.12rem;margin:0 0 14px}
+  .short{font-size:1.15rem;font-weight:700;color:var(--purple);margin:0 0 28px}
+  .swatch{display:block;width:56px;height:8px;border-radius:999px;margin-bottom:12px}
+  .swatch.teal{background:var(--teal)}
+  .swatch.purple{background:var(--purple)}
+  .swatch.coral{background:var(--coral)}
+  .swatch.gold{background:var(--gold)}
+  .swatch.lilac{background:var(--lilac)}
+  .points{display:grid;gap:14px;margin:8px 0 32px}
+  .points article,.track{background:#fff;border:1px solid rgba(43,34,54,.1);border-radius:18px;padding:18px 20px}
+  .points p,.track p{margin:0}
+  .track p+p{margin-top:10px}
+  form{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-top:8px}
+  label{display:block;font-weight:700;margin-bottom:8px;color:var(--ink)}
+  input[type=email]{width:100%;padding:16px 18px;border-radius:14px;border:1.5px solid rgba(43,34,54,.22);background:#fff;color:var(--ink);font:1rem/1.4 'Atkinson Hyperlegible',system-ui,sans-serif}
+  input[type=email]:focus{outline:3px solid var(--purple);outline-offset:2px;border-color:var(--purple)}
+  button[type=submit]{padding:16px 26px;border:2px solid var(--purple);border-radius:14px;background:var(--purple);color:#fff;font:700 1rem/1 'Atkinson Hyperlegible',system-ui,sans-serif;cursor:pointer;min-height:48px}
+  button[type=submit]:focus{outline:3px solid var(--ink);outline-offset:3px}
+  .fine{font-size:.98rem;margin:14px 0 0}
+  .hear{font-weight:700}
+  footer{border-top:1px solid rgba(43,34,54,.1);color:var(--ink);font-size:.95rem;text-align:center;padding:28px 18px 36px}
+  footer a{color:var(--purple);margin:0 6px;font-weight:700;text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  [data-success]{color:var(--purple)}
+  [data-error]{border-color:var(--purple)}
+  [data-error] .at-error-title{color:var(--purple)}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wash" aria-hidden="true"></div>
+<header class="top">
+  <a class="brand" href="/">
+    <img src="/brand/abletap-mark.svg?v=20261010" width="40" height="40" alt="">
+    <span class="word">AbleTap<span style="color:#6B3FE0">.io</span></span>
+  </a>
+  <span class="soon">Coming soon</span>
+</header>
+<main>
+  <div class="mark-wrap"><img src="/brand/abletap-mark.svg?v=20261010" width="72" height="72" alt=""></div>
+  <h1>Say what they mean, one clear tap at a time.</h1>
+  <p class="lede">AbleTap is a picture-based AAC app for iPad, built by a family for their nonverbal daughter. It helps people say what they mean and call the people they love, one clear tap at a time.</p>
+  <p class="short">Coming soon to iPad. Join the free waitlist.</p>
+
+  <div class="points">
+    <article>
+      <span class="swatch teal" aria-hidden="true"></span>
+      <h2>My Day</h2>
+      <p>My Day lays out the day as a simple picture timeline. Tap a card to open the talk board or see what's next.</p>
+    </article>
+    <article>
+      <span class="swatch purple" aria-hidden="true"></span>
+      <h2>Picture buttons that stay put</h2>
+      <p>If your loved one already uses a picture board, AbleTap will feel familiar: big, steady buttons that stay put. It is designed to help.</p>
+    </article>
+  </div>
+
+  <div data-formwrap>
+    <form name="waitlist" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="return atSubmit(event)">
+      <input type="hidden" name="form-name" value="waitlist">
+      <p hidden><label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <input type="hidden" name="utm_source">
+      <input type="hidden" name="utm_medium">
+      <input type="hidden" name="utm_campaign">
+      <input type="hidden" name="utm_content">
+      <input type="hidden" name="utm_term">
+      <input type="hidden" name="landing_path">
+      <div style="flex:1;min-width:220px">
+        <label for="ea-email">Email address</label>
+        <input id="ea-email" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+      </div>
+      <button type="submit">Join the waitlist</button>
+    </form>
+    <div data-error id="ea-waitlist-error" hidden role="alert">
+      <p class="at-error-title">Couldn't join the waitlist.</p>
+      <p>Your email is still in the box. Check your connection and try again.</p>
+      <button type="button" data-retry>Try again</button>
+    </div>
+    <div data-success hidden role="status">You're on the list. We'll email<span data-email></span> when AbleTap is ready.</div>
+  </div>
+  <p class="fine">AbleTap is coming soon to iPad. Join the free waitlist and we'll let you know when it's ready. No spam, and we never sell your data.</p>
+
+  <div class="points" style="margin-top:32px">
+    <article>
+      <span class="swatch coral" aria-hidden="true"></span>
+      <h2>Call the people they love</h2>
+      <p>AbleTap is designed to help someone call the people they love, one clear tap at a time. Calls are part of what we're building and are not available yet.</p>
+    </article>
+    <article>
+      <span class="swatch gold" aria-hidden="true"></span>
+      <h2>An early TV feature</h2>
+      <p>An early TV feature lets you tap a show's picture to start it on a supported TV box, and we're still improving it.</p>
+    </article>
+    <article>
+      <span class="swatch lilac" aria-hidden="true"></span>
+      <h2>Ava, coming later</h2>
+      <p>Ava, a friendly guide we're building (coming later). She isn't in the app yet.</p>
+    </article>
+  </div>
+
+  <aside class="track" aria-labelledby="track-title">
+    <h2 id="track-title">What we track and why</h2>
+    <p>If you choose Accept, and only when an advertising ID is configured, this site may load the Meta Pixel and the LinkedIn Insight Tag to count the visit. We send a page view only. We don't send health or disability details, and we don't send your email to those services. Decline keeps those tags off. That choice is saved on this device. <a href="/privacy.html">Read the privacy policy</a>.</p>
+    <p>If the link you opened includes campaign parameters, we save those and this page's path in this browser tab so the waitlist form can include them. They are not sent to Meta or LinkedIn.</p>
+  </aside>
+</main>
+<footer>
+  <p style="margin:0 0 10px">Questions? <a href="mailto:info@abletap.io">info@abletap.io</a></p>
+  <p style="margin:0">© 2026 AbleTap.io · <a href="https://chill.support">A Chill, LLC company</a> · <a href="/">Home</a> · <a href="/support.html">Support</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <button type="button" data-cookie-choices>Cookie choices</button></p>
+</footer>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var style = document.createElement("style");
+  style.id = "at-consent-mosaic";
+  style.textContent = "#at-consent{background:#FAF5EF;color:#2B2236;border-top:3px solid #6B3FE0;box-shadow:0 -8px 30px rgba(43,34,54,.12);}#at-consent h2,#at-consent p{color:#2B2236;}#at-consent a{color:#6B3FE0;}#at-consent-accept{background:#6B3FE0;color:#fff;border:2px solid #6B3FE0;}#at-consent-decline{background:#fff;color:#2B2236;border:2px solid #2B2236;}#at-consent a:focus,#at-consent button:focus{outline:3px solid #6B3FE0;outline-offset:3px;}";
+  document.head.appendChild(style);
+});
+</script>
+</body>
+</html>

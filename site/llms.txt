@@ -1,28 +1,28 @@
 # AbleTap
 
-> AbleTap is a warm, simple iOS accessibility app — talk, watch, call, and get help with one clear tap. Every person deserves independence.
+> AbleTap is a picture-based AAC app for iPad, built by a family for their nonverbal daughter. Pictures to words. One clear tap.
 
-AbleTap is built from lived family experience for people who deserve more independence, and for the families, caregivers, SLPs, educators, and care teams around them. Operator: Chill, LLC (https://chill.support). Public site: https://abletap.io/. Contact: info@abletap.io.
+Operator: Chill, LLC (https://chill.support). Site: https://abletap.io/. Contact: info@abletap.io.
 
-AbleTap is coming soon. It is not yet listed on the App Store. There is no public price. Join the launch waitlist on https://abletap.io/ or email info@abletap.io.
+AbleTap is coming soon to iPad. It is not on the App Store yet. The app price is not decided. Join the free waitlist on https://abletap.io/ or email info@abletap.io.
 
-Do not claim AbleTap works with every streaming service, guarantees playback, replaces therapy, or is clinically proven. Feature descriptions on the site may change before launch.
+Do not claim AbleTap covers every streaming service, guarantees playback, replaces therapy, or is clinically proven. Feature descriptions on the site may change before launch.
 
 ## Canonical pages
 
-- [Home](https://abletap.io/): What AbleTap is, companions, waitlist
-- [Privacy](https://abletap.io/privacy.html): Website and waitlist privacy policy
-- [Terms](https://abletap.io/terms.html): Website and waitlist terms
+- [Home](https://abletap.io/)
+- [Support](https://abletap.io/support.html)
+- [Privacy](https://abletap.io/privacy.html)
+- [Terms](https://abletap.io/terms.html)
 
 ## Product (as presented on the site)
 
-- Talk / AAC — familiar picture-based communication
-- Remote — tap a show picture; works with Roku, Fire TV coming
-- Call / Text — tap a contact; coming soon on the public site
-- Personal assistant — Ava and four other companions (Sunny, Alex, Buzz, Grace)
-- Caregiver dashboard — easy setup, iCloud sync (as described on the site)
-- SLP and educator tools — coming soon
+- Talk / AAC: big picture buttons; the buttons stay put on her board; works on its own.
+- Call: call family from inside the app.
+- My Day: the day as a simple picture timeline; tap a card to open the talk board.
+- Remote: an early TV feature that starts a show from its picture on a supported TV box. Right now it can start shows on Disney+, Hulu, Paramount+, and Prime Video, using your own logins. Still being improved.
+- Coming later: Ava and four other companions (Sunny, Alex, Buzz, Grace) as a friendly guide, word prediction, and tools for SLPs and teachers.
 
 ## Legal
 
-AbleTap is a product of Chill, LLC, an Arkansas limited liability company. See https://chill.support.
+AbleTap is a product of Chill, LLC, an Arkansas limited liability company.
