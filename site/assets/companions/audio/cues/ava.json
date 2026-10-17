@@ -1,1 +1,722 @@
-{"version":1,"companion":"ava","audio":"../ava.mp3","duration":6.03,"lookAheadMs":160,"mouthCues":[{"start":0.0,"end":0.03,"viseme":"rest"},{"start":0.03,"end":0.32,"viseme":"ah"},{"start":0.32,"end":0.4,"viseme":"ih"},{"start":0.4,"end":0.68,"viseme":"ee"},{"start":0.68,"end":0.75,"viseme":"ih"},{"start":0.75,"end":0.81,"viseme":"ee"},{"start":0.81,"end":0.95,"viseme":"ih"},{"start":0.95,"end":1.02,"viseme":"ee"},{"start":1.02,"end":1.09,"viseme":"fv"},{"start":1.09,"end":1.4,"viseme":"ah"},{"start":1.4,"end":1.46,"viseme":"ih"},{"start":1.46,"end":1.69,"viseme":"ee"},{"start":1.69,"end":1.97,"viseme":"uw"},{"start":1.97,"end":2.04,"viseme":"ah"},{"start":2.04,"end":2.25,"viseme":"uw"},{"start":2.25,"end":2.32,"viseme":"fv"},{"start":2.32,"end":2.39,"viseme":"ih"},{"start":2.39,"end":2.46,"viseme":"ee"},{"start":2.46,"end":2.53,"viseme":"fv"},{"start":2.53,"end":2.74,"viseme":"ee"},{"start":2.74,"end":2.88,"viseme":"oh"},{"start":2.88,"end":3.02,"viseme":"uw"},{"start":3.02,"end":3.22,"viseme":"rest"},{"start":3.22,"end":3.27,"viseme":"ee"},{"start":3.27,"end":3.32,"viseme":"ih"},{"start":3.32,"end":3.53,"viseme":"ee"},{"start":3.53,"end":3.67,"viseme":"ih"},{"start":3.67,"end":3.76,"viseme":"mbp"},{"start":3.76,"end":3.84,"viseme":"ee"},{"start":3.84,"end":3.92,"viseme":"mbp"},{"start":3.92,"end":4.22,"viseme":"ee"},{"start":4.22,"end":4.46,"viseme":"oh"},{"start":4.46,"end":4.69,"viseme":"ih"},{"start":4.69,"end":4.83,"viseme":"ee"},{"start":4.83,"end":4.97,"viseme":"ah"},{"start":4.97,"end":5.18,"viseme":"ee"},{"start":5.18,"end":5.32,"viseme":"fv"},{"start":5.32,"end":5.46,"viseme":"oh"},{"start":5.46,"end":5.81,"viseme":"uw"},{"start":5.81,"end":6.03,"viseme":"rest"}]}
+{
+ "text": "Hi, I'm Ava. Ready to watch your favorite show? Just tap the picture, and I'll start it for you.",
+ "model": "eleven_v3",
+ "alignment": {
+  "characters": [
+   "H",
+   "i",
+   ",",
+   " ",
+   "I",
+   "'",
+   "m",
+   " ",
+   "A",
+   "v",
+   "a",
+   ".",
+   " ",
+   "R",
+   "e",
+   "a",
+   "d",
+   "y",
+   " ",
+   "t",
+   "o",
+   " ",
+   "w",
+   "a",
+   "t",
+   "c",
+   "h",
+   " ",
+   "y",
+   "o",
+   "u",
+   "r",
+   " ",
+   "f",
+   "a",
+   "v",
+   "o",
+   "r",
+   "i",
+   "t",
+   "e",
+   " ",
+   "s",
+   "h",
+   "o",
+   "w",
+   "?",
+   " ",
+   "J",
+   "u",
+   "s",
+   "t",
+   " ",
+   "t",
+   "a",
+   "p",
+   " ",
+   "t",
+   "h",
+   "e",
+   " ",
+   "p",
+   "i",
+   "c",
+   "t",
+   "u",
+   "r",
+   "e",
+   ",",
+   " ",
+   "a",
+   "n",
+   "d",
+   " ",
+   "I",
+   "'",
+   "l",
+   "l",
+   " ",
+   "s",
+   "t",
+   "a",
+   "r",
+   "t",
+   " ",
+   "i",
+   "t",
+   " ",
+   "f",
+   "o",
+   "r",
+   " ",
+   "y",
+   "o",
+   "u",
+   "."
+  ],
+  "character_start_times_seconds": [
+   0.0,
+   0.16,
+   0.32,
+   0.48,
+   0.52,
+   0.56,
+   0.6,
+   0.64,
+   0.74,
+   0.84,
+   0.94,
+   1.04,
+   1.12,
+   1.227,
+   1.333,
+   1.44,
+   1.547,
+   1.653,
+   1.76,
+   1.813,
+   1.867,
+   1.92,
+   1.96,
+   2.0,
+   2.04,
+   2.08,
+   2.12,
+   2.16,
+   2.192,
+   2.224,
+   2.256,
+   2.288,
+   2.32,
+   2.356,
+   2.391,
+   2.427,
+   2.462,
+   2.498,
+   2.533,
+   2.569,
+   2.604,
+   2.64,
+   2.704,
+   2.768,
+   2.832,
+   2.896,
+   2.96,
+   3.04,
+   3.168,
+   3.296,
+   3.424,
+   3.552,
+   3.68,
+   3.74,
+   3.8,
+   3.86,
+   3.92,
+   3.94,
+   3.96,
+   3.98,
+   4.0,
+   4.06,
+   4.12,
+   4.18,
+   4.24,
+   4.3,
+   4.36,
+   4.42,
+   4.48,
+   4.72,
+   4.76,
+   4.8,
+   4.84,
+   4.88,
+   4.92,
+   4.96,
+   4.987,
+   5.013,
+   5.04,
+   5.093,
+   5.147,
+   5.2,
+   5.253,
+   5.307,
+   5.36,
+   5.413,
+   5.467,
+   5.52,
+   5.56,
+   5.6,
+   5.64,
+   5.68,
+   5.76,
+   5.84,
+   5.92,
+   6.0
+  ],
+  "character_end_times_seconds": [
+   0.16,
+   0.32,
+   0.48,
+   0.52,
+   0.56,
+   0.6,
+   0.64,
+   0.74,
+   0.84,
+   0.94,
+   1.04,
+   1.12,
+   1.227,
+   1.333,
+   1.44,
+   1.547,
+   1.653,
+   1.76,
+   1.813,
+   1.867,
+   1.92,
+   1.96,
+   2.0,
+   2.04,
+   2.08,
+   2.12,
+   2.16,
+   2.192,
+   2.224,
+   2.256,
+   2.288,
+   2.32,
+   2.356,
+   2.391,
+   2.427,
+   2.462,
+   2.498,
+   2.533,
+   2.569,
+   2.604,
+   2.64,
+   2.704,
+   2.768,
+   2.832,
+   2.896,
+   2.96,
+   3.04,
+   3.168,
+   3.296,
+   3.424,
+   3.552,
+   3.68,
+   3.74,
+   3.8,
+   3.86,
+   3.92,
+   3.94,
+   3.96,
+   3.98,
+   4.0,
+   4.06,
+   4.12,
+   4.18,
+   4.24,
+   4.3,
+   4.36,
+   4.42,
+   4.48,
+   4.72,
+   4.76,
+   4.8,
+   4.84,
+   4.88,
+   4.92,
+   4.96,
+   4.987,
+   5.013,
+   5.04,
+   5.093,
+   5.147,
+   5.2,
+   5.253,
+   5.307,
+   5.36,
+   5.413,
+   5.467,
+   5.52,
+   5.56,
+   5.6,
+   5.64,
+   5.68,
+   5.76,
+   5.84,
+   5.92,
+   6.0,
+   6.32
+  ]
+ },
+ "mouthCues": [
+  {
+   "start": 0.0,
+   "end": 0.32,
+   "viseme": "ih"
+  },
+  {
+   "start": 0.32,
+   "end": 0.52,
+   "viseme": "rest"
+  },
+  {
+   "start": 0.52,
+   "end": 0.56,
+   "viseme": "ih"
+  },
+  {
+   "start": 0.56,
+   "end": 0.6,
+   "viseme": "rest"
+  },
+  {
+   "start": 0.6,
+   "end": 0.64,
+   "viseme": "mbp"
+  },
+  {
+   "start": 0.64,
+   "end": 0.74,
+   "viseme": "rest"
+  },
+  {
+   "start": 0.74,
+   "end": 0.84,
+   "viseme": "ah"
+  },
+  {
+   "start": 0.84,
+   "end": 0.94,
+   "viseme": "fv"
+  },
+  {
+   "start": 0.94,
+   "end": 1.04,
+   "viseme": "ah"
+  },
+  {
+   "start": 1.04,
+   "end": 1.227,
+   "viseme": "rest"
+  },
+  {
+   "start": 1.227,
+   "end": 1.333,
+   "viseme": "ih"
+  },
+  {
+   "start": 1.333,
+   "end": 1.44,
+   "viseme": "ee"
+  },
+  {
+   "start": 1.44,
+   "end": 1.547,
+   "viseme": "ah"
+  },
+  {
+   "start": 1.547,
+   "end": 1.653,
+   "viseme": "lth"
+  },
+  {
+   "start": 1.653,
+   "end": 1.76,
+   "viseme": "ih"
+  },
+  {
+   "start": 1.76,
+   "end": 1.813,
+   "viseme": "rest"
+  },
+  {
+   "start": 1.813,
+   "end": 1.867,
+   "viseme": "lth"
+  },
+  {
+   "start": 1.867,
+   "end": 1.92,
+   "viseme": "oh"
+  },
+  {
+   "start": 1.92,
+   "end": 1.96,
+   "viseme": "rest"
+  },
+  {
+   "start": 1.96,
+   "end": 2.0,
+   "viseme": "uw"
+  },
+  {
+   "start": 2.0,
+   "end": 2.04,
+   "viseme": "ah"
+  },
+  {
+   "start": 2.04,
+   "end": 2.08,
+   "viseme": "lth"
+  },
+  {
+   "start": 2.08,
+   "end": 2.16,
+   "viseme": "ih"
+  },
+  {
+   "start": 2.16,
+   "end": 2.192,
+   "viseme": "rest"
+  },
+  {
+   "start": 2.192,
+   "end": 2.224,
+   "viseme": "ih"
+  },
+  {
+   "start": 2.224,
+   "end": 2.256,
+   "viseme": "oh"
+  },
+  {
+   "start": 2.256,
+   "end": 2.288,
+   "viseme": "uw"
+  },
+  {
+   "start": 2.288,
+   "end": 2.32,
+   "viseme": "ih"
+  },
+  {
+   "start": 2.32,
+   "end": 2.356,
+   "viseme": "rest"
+  },
+  {
+   "start": 2.356,
+   "end": 2.391,
+   "viseme": "fv"
+  },
+  {
+   "start": 2.391,
+   "end": 2.427,
+   "viseme": "ah"
+  },
+  {
+   "start": 2.427,
+   "end": 2.462,
+   "viseme": "fv"
+  },
+  {
+   "start": 2.462,
+   "end": 2.498,
+   "viseme": "oh"
+  },
+  {
+   "start": 2.498,
+   "end": 2.569,
+   "viseme": "ih"
+  },
+  {
+   "start": 2.569,
+   "end": 2.604,
+   "viseme": "lth"
+  },
+  {
+   "start": 2.604,
+   "end": 2.64,
+   "viseme": "ee"
+  },
+  {
+   "start": 2.64,
+   "end": 2.704,
+   "viseme": "rest"
+  },
+  {
+   "start": 2.704,
+   "end": 2.832,
+   "viseme": "ih"
+  },
+  {
+   "start": 2.832,
+   "end": 2.896,
+   "viseme": "oh"
+  },
+  {
+   "start": 2.896,
+   "end": 2.96,
+   "viseme": "uw"
+  },
+  {
+   "start": 2.96,
+   "end": 3.168,
+   "viseme": "rest"
+  },
+  {
+   "start": 3.168,
+   "end": 3.296,
+   "viseme": "ih"
+  },
+  {
+   "start": 3.296,
+   "end": 3.424,
+   "viseme": "uw"
+  },
+  {
+   "start": 3.424,
+   "end": 3.552,
+   "viseme": "ih"
+  },
+  {
+   "start": 3.552,
+   "end": 3.68,
+   "viseme": "lth"
+  },
+  {
+   "start": 3.68,
+   "end": 3.74,
+   "viseme": "rest"
+  },
+  {
+   "start": 3.74,
+   "end": 3.8,
+   "viseme": "lth"
+  },
+  {
+   "start": 3.8,
+   "end": 3.86,
+   "viseme": "ah"
+  },
+  {
+   "start": 3.86,
+   "end": 3.92,
+   "viseme": "mbp"
+  },
+  {
+   "start": 3.92,
+   "end": 3.94,
+   "viseme": "rest"
+  },
+  {
+   "start": 3.94,
+   "end": 3.98,
+   "viseme": "lth"
+  },
+  {
+   "start": 3.98,
+   "end": 4.0,
+   "viseme": "ee"
+  },
+  {
+   "start": 4.0,
+   "end": 4.06,
+   "viseme": "rest"
+  },
+  {
+   "start": 4.06,
+   "end": 4.12,
+   "viseme": "mbp"
+  },
+  {
+   "start": 4.12,
+   "end": 4.24,
+   "viseme": "ih"
+  },
+  {
+   "start": 4.24,
+   "end": 4.3,
+   "viseme": "lth"
+  },
+  {
+   "start": 4.3,
+   "end": 4.36,
+   "viseme": "uw"
+  },
+  {
+   "start": 4.36,
+   "end": 4.42,
+   "viseme": "ih"
+  },
+  {
+   "start": 4.42,
+   "end": 4.48,
+   "viseme": "ee"
+  },
+  {
+   "start": 4.48,
+   "end": 4.76,
+   "viseme": "rest"
+  },
+  {
+   "start": 4.76,
+   "end": 4.8,
+   "viseme": "ah"
+  },
+  {
+   "start": 4.8,
+   "end": 4.88,
+   "viseme": "lth"
+  },
+  {
+   "start": 4.88,
+   "end": 4.92,
+   "viseme": "rest"
+  },
+  {
+   "start": 4.92,
+   "end": 4.96,
+   "viseme": "ih"
+  },
+  {
+   "start": 4.96,
+   "end": 4.987,
+   "viseme": "rest"
+  },
+  {
+   "start": 4.987,
+   "end": 5.04,
+   "viseme": "lth"
+  },
+  {
+   "start": 5.04,
+   "end": 5.093,
+   "viseme": "rest"
+  },
+  {
+   "start": 5.093,
+   "end": 5.147,
+   "viseme": "ih"
+  },
+  {
+   "start": 5.147,
+   "end": 5.2,
+   "viseme": "lth"
+  },
+  {
+   "start": 5.2,
+   "end": 5.253,
+   "viseme": "ah"
+  },
+  {
+   "start": 5.253,
+   "end": 5.307,
+   "viseme": "ih"
+  },
+  {
+   "start": 5.307,
+   "end": 5.36,
+   "viseme": "lth"
+  },
+  {
+   "start": 5.36,
+   "end": 5.413,
+   "viseme": "rest"
+  },
+  {
+   "start": 5.413,
+   "end": 5.467,
+   "viseme": "ih"
+  },
+  {
+   "start": 5.467,
+   "end": 5.52,
+   "viseme": "lth"
+  },
+  {
+   "start": 5.52,
+   "end": 5.56,
+   "viseme": "rest"
+  },
+  {
+   "start": 5.56,
+   "end": 5.6,
+   "viseme": "fv"
+  },
+  {
+   "start": 5.6,
+   "end": 5.64,
+   "viseme": "oh"
+  },
+  {
+   "start": 5.64,
+   "end": 5.68,
+   "viseme": "ih"
+  },
+  {
+   "start": 5.68,
+   "end": 5.76,
+   "viseme": "rest"
+  },
+  {
+   "start": 5.76,
+   "end": 5.84,
+   "viseme": "ih"
+  },
+  {
+   "start": 5.84,
+   "end": 5.92,
+   "viseme": "oh"
+  },
+  {
+   "start": 5.92,
+   "end": 6.0,
+   "viseme": "uw"
+  },
+  {
+   "start": 6.0,
+   "end": 6.32,
+   "viseme": "rest"
+  }
+ ]
+}
