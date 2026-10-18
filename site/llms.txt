@@ -17,7 +17,7 @@ Do not claim AbleTap works with every streaming service, guarantees playback, re
 ## Product (as presented on the site)
 
 - Talk / AAC — familiar picture-based communication
-- Remote — tap a show picture; works with Roku, Fire TV coming
+- Remote — tap a show picture to play it on the TV (Disney+, Hulu, Paramount+ and Prime Video)
 - Call / Text — tap a contact; coming soon on the public site
 - Personal assistant — Ava and four other companions (Sunny, Alex, Buzz, Grace)
 - Caregiver dashboard — easy setup, iCloud sync (as described on the site)

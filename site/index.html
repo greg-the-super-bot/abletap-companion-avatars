@@ -62,7 +62,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
   {"@type":"Organization","@id":"https://abletap.io/#org","name":"AbleTap","url":"https://abletap.io","logo":"https://abletap.io/favicon-512.png","email":"info@abletap.io","telephone":"+1-479-310-0051","parentOrganization":{"@type":"Organization","name":"Chill, LLC","url":"https://chill.support"}},
   {"@type":"WebSite","@id":"https://abletap.io/#website","url":"https://abletap.io","name":"AbleTap","publisher":{"@id":"https://abletap.io/#org"}},
   {"@type":"WebPage","@id":"https://abletap.io/#home","url":"https://abletap.io/","name":"AbleTap.io — Every person deserves independence","isPartOf":{"@id":"https://abletap.io/#website"},"about":{"@id":"https://abletap.io/#app"}},
-  {"@type":"SoftwareApplication","@id":"https://abletap.io/#app","name":"AbleTap","applicationCategory":"HealthApplication","operatingSystem":"iOS","url":"https://abletap.io","description":"A warm, simple iOS accessibility app — talk, watch, call, and get help with one clear tap. Coming soon; join the waitlist.","offers":{"@type":"Offer","availability":"https://schema.org/PreOrder"},"publisher":{"@id":"https://abletap.io/#org"}},
+  {"@type":"SoftwareApplication","@id":"https://abletap.io/#app","name":"AbleTap","operatingSystem":"iOS","url":"https://abletap.io","description":"A warm, simple iOS accessibility app — talk, watch, call, and get help with one clear tap. Coming soon; join the waitlist.","publisher":{"@id":"https://abletap.io/#org"}},
   {"@type":"FAQPage","mainEntity":[
     {"@type":"Question","name":"What is AbleTap?","acceptedAnswer":{"@type":"Answer","text":"AbleTap is a warm, simple iOS accessibility app — talk, watch, call, and get help with one clear tap. It is built from lived family experience."}},
     {"@type":"Question","name":"Is AbleTap available now?","acceptedAnswer":{"@type":"Answer","text":"AbleTap is coming soon. Families can join the launch waitlist at abletap.io or email info@abletap.io."}},
@@ -120,6 +120,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
           <div data-success style="display:none;align-items:center;gap:8px;margin-top:14px;color:#2E9C84;font-weight:700;font-size:1rem;">
             <span aria-hidden="true">🎉</span> You're on the list! We'll reach out to <span data-email style="color:#6B4CE0;">&nbsp;</span>
           </div>
+          <div data-error role="alert" style="display:none;margin-top:14px;font-weight:700;font-size:1rem;color:#A3261A;">Sorry, that didn&#39;t go through. Please try again, or email us at <a href="mailto:hello@abletap.io" style="color:inherit;text-decoration:underline;">hello@abletap.io</a>.</div>
         </div>
         <div style="display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;font-size:0.9rem;color:#7a7184;">
           <span style="display:inline-flex;align-items:center;gap:7px;"><span aria-hidden="true" style="color:#2E9C84;font-weight:900;">✓</span> Waitlist is free</span>
@@ -233,8 +234,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
         <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(169,139,242,0.2);border-radius:22px;padding:32px;backdrop-filter:blur(4px);">
           <div style="width:58px;height:58px;border-radius:16px;background:linear-gradient(140deg,#6B4CE0,#A98BF2);display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 14px 30px -12px rgba(107,76,224,0.8);"><svg width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true"><rect x="3" y="4" width="28" height="19" rx="3" stroke="#fff" stroke-width="2.2"/><polygon points="14,10 14,17 21,13.5" fill="#fff"/><path d="M12 23 L11 30 M22 23 L23 30 M10 30 L24 30" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
           <h3 style="font-family:'Atkinson Hyperlegible',sans-serif;font-weight:700;font-size:1.26rem;color:#FAF5EF;margin:0 0 12px;letter-spacing:-0.1px;">TV &amp; Streaming Control</h3>
-          <p style="font-size:0.98rem;color:rgba(246,240,255,0.92);margin:0 0 18px;">Tap the picture of the show — and it plays. No menus to dig through, no remote to fumble with. Netflix, Disney+, YouTube, Hulu — all just one picture away. This was the first thing we built, and it changed everything for our daughter.</p>
-          <span style="display:inline-block;font-size:0.78rem;font-weight:700;color:#DCCBFF;background:rgba(107,76,224,0.16);border:1px solid rgba(169,139,242,0.32);padding:6px 13px;border-radius:999px;">Works with Roku · Fire TV coming</span>
+          <p style="font-size:0.98rem;color:rgba(246,240,255,0.92);margin:0 0 18px;">Tap the picture of the show — and it plays. No menus to dig through, no remote to fumble with. Disney+, Hulu, Paramount+ and Prime Video — each just one picture away. This was the first thing we built, and it changed everything for our daughter.</p>
         </div>
         <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(245,146,106,0.22);border-radius:22px;padding:32px;backdrop-filter:blur(4px);">
           <div style="width:58px;height:58px;border-radius:16px;background:linear-gradient(140deg,#F5926A,#F4B96B);display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 14px 30px -12px rgba(245,146,106,0.8);"><svg width="28" height="28" viewBox="0 0 34 34" fill="none" aria-hidden="true"><rect x="9" y="3" width="16" height="28" rx="3.5" stroke="#fff" stroke-width="2.2"/><circle cx="17" cy="26.5" r="1.8" fill="#fff"/><line x1="14" y1="6" x2="20" y2="6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
@@ -246,7 +246,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
         <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(244,185,107,0.24);border-radius:22px;padding:32px;backdrop-filter:blur(4px);">
           <div style="width:58px;height:58px;border-radius:16px;background:linear-gradient(140deg,#E0992F,#F4B96B);display:flex;align-items:center;justify-content:center;margin-bottom:20px;box-shadow:0 14px 30px -12px rgba(224,153,47,0.7);"><svg width="30" height="30" viewBox="0 0 34 34" fill="none" aria-hidden="true"><path d="M3 5 H31 V23 H21 L17 29 L13 23 H3 Z" fill="none" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/><g fill="#fff"><circle cx="11" cy="14" r="2"/><circle cx="17" cy="14" r="2"/><circle cx="23" cy="14" r="2"/></g></svg></div>
           <h3 style="font-family:'Atkinson Hyperlegible',sans-serif;font-weight:700;font-size:1.26rem;color:#FAF5EF;margin:0 0 12px;letter-spacing:-0.1px;">AAC &amp; Communication</h3>
-          <p style="font-size:0.98rem;color:rgba(246,240,255,0.92);margin:0 0 18px;">Real AAC, built from lived family experience. If your loved one has ever used TouchChat, Proloquo2Go, or a picture board, AbleTap.io will feel familiar from the very first tap — the same visual language they already know. A gentle prediction row suggests the next word they choose — they stay the author, always.</p>
+          <p style="font-size:0.98rem;color:rgba(246,240,255,0.92);margin:0 0 18px;">Real AAC, built from lived family experience. If your loved one has ever used a picture board, AbleTap.io will feel familiar from the very first tap — the same visual language they already know. A gentle prediction row suggests the next word they choose — they stay the author, always.</p>
           <span style="display:inline-block;font-size:0.78rem;font-weight:700;color:#FBE6C2;background:rgba(224,153,47,0.16);border:1px solid rgba(244,185,107,0.34);padding:6px 13px;border-radius:999px;">Familiar from the first tap · Works on its own</span>
         </div>
         <div style="background:rgba(255,255,255,0.045);border:1px solid rgba(169,139,242,0.2);border-radius:22px;padding:32px;backdrop-filter:blur(4px);">
@@ -370,7 +370,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
           <span style="font-size:0.82rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.07);border:1px solid rgba(169,139,242,0.3);padding:7px 15px;border-radius:999px;">✨ Always Encouraging</span>
           <span style="font-size:0.82rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.07);border:1px solid rgba(169,139,242,0.3);padding:7px 15px;border-radius:999px;">🤗 Feels Like Family</span>
         </div>
-        <button data-name="Ava" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:1rem;font-weight:700;padding:15px 38px;border:none;border-radius:999px;cursor:pointer;background:linear-gradient(135deg,#6B4CE0,#8A5BE6);color:#fff;box-shadow:0 16px 36px -12px rgba(107,76,224,0.8);" onMouseOver="this.style.transform='translateY(-2px)'" onMouseOut="this.style.transform='translateY(0)'">💜 Talk to Ava</button>
+        <button data-name="Ava" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:1rem;font-weight:700;padding:15px 38px;border:none;border-radius:999px;cursor:pointer;background:linear-gradient(135deg,#6B4CE0,#8A5BE6);color:#fff;box-shadow:0 16px 36px -12px rgba(107,76,224,0.8);" onMouseOver="this.style.transform='translateY(-2px)'" onMouseOut="this.style.transform='translateY(0)'">💜 Hear Ava say hello</button>
       </div>
 
       <p style="text-align:center;color:rgba(246,240,255,0.9);font-size:0.85rem;margin:0 0 34px;">Or choose a different personality below ↓</p>
@@ -386,7 +386,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
             <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🎨 Visual &amp; Fun</span>
             <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">💛 Super Patient</span>
           </div>
-          <button data-name="Sunny" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">🌟 Talk to Sunny</button>
+          <button data-name="Sunny" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">🌟 Hear Sunny say hello</button>
         </div>
         <div data-companion-card style="background:rgba(255,255,255,0.045);border:1px solid rgba(169,139,242,0.2);border-radius:24px;padding:34px 28px;text-align:center;">
           <div style="width:98px;height:98px;margin:0 auto 16px;border-radius:50%;padding:4px;background:conic-gradient(from 200deg,#A98BF2,#F5926A,#F4B96B,#A98BF2);"><span class="at-ava" data-c="alex"><img alt="Alex, AbleTap companion" src="assets/companions/alex/closed.png" width="512" height="512"></span></div>
@@ -398,7 +398,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
             <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🤝 Respectful</span>
             <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">⚡ Efficient</span>
           </div>
-          <button data-name="Alex" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">💼 Talk to Alex</button>
+          <button data-name="Alex" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">💼 Hear Alex say hello</button>
         </div>
         <div data-companion-card style="background:rgba(255,255,255,0.045);border:1px solid rgba(169,139,242,0.2);border-radius:24px;padding:34px 28px;text-align:center;">
           <div style="width:98px;height:98px;margin:0 auto 16px;border-radius:50%;padding:4px;background:conic-gradient(from 200deg,#A98BF2,#F5926A,#F4B96B,#A98BF2);"><span class="at-ava" data-c="buzz"><img alt="Buzz, AbleTap companion" src="assets/companions/buzz/closed.png" width="512" height="512"></span></div>
@@ -410,7 +410,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
             <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🎭 Big Personality</span>
             <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">💪 Still Gets It Done</span>
           </div>
-          <button data-name="Buzz" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">😄 Talk to Buzz</button>
+          <button data-name="Buzz" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">😄 Hear Buzz say hello</button>
         </div>
         <div data-companion-card style="background:rgba(255,255,255,0.045);border:1px solid rgba(169,139,242,0.2);border-radius:24px;padding:34px 28px;text-align:center;">
           <div style="width:98px;height:98px;margin:0 auto 16px;border-radius:50%;padding:4px;background:conic-gradient(from 200deg,#A98BF2,#F5926A,#F4B96B,#A98BF2);"><span class="at-ava" data-c="grace"><img alt="Grace, AbleTap companion" src="assets/companions/grace/closed.png" width="512" height="512"></span></div>
@@ -422,7 +422,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
             <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">💚 Warm &amp; Kind</span>
             <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🔄 Never Frustrated</span>
           </div>
-          <button data-name="Grace" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">🍵 Talk to Grace</button>
+          <button data-name="Grace" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">🍵 Hear Grace say hello</button>
         </div>
       </div>
     </div>
@@ -449,6 +449,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
         <div data-success style="display:none;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:#A6E2D4;font-weight:700;">
           <span aria-hidden="true">🎉</span> You're in! Welcome to the AbleTap.io family — we'll be in touch soon.
         </div>
+        <div data-error role="alert" style="display:none;margin-top:14px;font-weight:700;font-size:1rem;color:#FFC2B3;text-align:center;">Sorry, that didn&#39;t go through. Please try again, or email us at <a href="mailto:hello@abletap.io" style="color:inherit;text-decoration:underline;">hello@abletap.io</a>.</div>
       </div>
       <p style="font-size:0.85rem;color:rgba(246,240,255,0.9);margin:18px 0 0;">We respect your privacy. No spam, no selling your data. Ever.</p>
       <p style="font-size:0.98rem;color:rgba(246,240,255,0.92);margin:26px 0 0;">Have a question, a story to share, or just want to say hi? We'd genuinely love to hear from you — <a href="mailto:hello@abletap.io" style="color:#F4B96B;font-weight:700;border-bottom:1px solid rgba(244,185,107,0.5);">hello@abletap.io</a></p>
@@ -594,13 +595,30 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
     }
   };
 
+  // Waitlist: only say "You're on the list" when the form host accepted it
+  // (response.ok). Otherwise show an error with our email and keep what they typed.
   window.atSubmit=function(ev){
     ev.preventDefault(); var form=ev.target;
     var wrap=form.closest("[data-formwrap]");
     var input=form.querySelector("input[type=email]"), email=input?input.value:"";
-    try{ var data=new URLSearchParams(new FormData(form)).toString();
-      fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:data}).catch(function(){}); }catch(e){}
-    if(wrap){ form.style.display="none"; var s=wrap.querySelector("[data-success]"); if(s){ s.style.display="flex"; var em=s.querySelector("[data-email]"); if(em) em.textContent=" "+email; } }
+    var btn=form.querySelector("button[type=submit]");
+    var ok=wrap?wrap.querySelector("[data-success]"):null, bad=wrap?wrap.querySelector("[data-error]"):null;
+    if(bad) bad.style.display="none";
+    if(btn){ btn.disabled=true; btn.style.opacity="0.7"; }
+    var done=function(success){
+      if(btn){ btn.disabled=false; btn.style.opacity=""; }
+      if(success){
+        form.style.display="none";
+        if(ok){ ok.style.display="flex"; var em=ok.querySelector("[data-email]"); if(em) em.textContent=" "+email; }
+      } else if(bad){
+        bad.style.display="block";          // the form stays visible, still filled in
+      }
+    };
+    try{
+      var data=new URLSearchParams(new FormData(form)).toString();
+      fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:data})
+        .then(function(r){ done(r.ok); }, function(){ done(false); });
+    }catch(e){ done(false); }
     return false;
   };
 })();
