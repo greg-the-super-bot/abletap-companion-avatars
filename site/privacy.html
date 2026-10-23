@@ -46,7 +46,7 @@
 <div class="topbar"><div class="in"><a href="/" style="display:flex;align-items:center;gap:10px;color:inherit"><img class="mark" src="/brand/abletap-mark.svg?v=20261010" width="32" height="32" alt=""><span class="wordmark">AbleTap<span style="color:var(--purple)">.io</span></span></a></div></div>
 <div class="doc">
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: July 1, 2026</p>
+  <p class="meta">Last updated: October 21, 2026</p>
 
   <p class="lead">AbleTap ("AbleTap," "we," "us," or "our") is a product of Chill, LLC, an Arkansas limited liability company. This Privacy Policy explains what information is collected when you visit <strong>AbleTap.io</strong> and join our launch waitlist.</p>
 
@@ -56,7 +56,8 @@
   <ul>
     <li><strong>Waitlist sign-up:</strong> when you join the launch waitlist, you provide your <strong>email address</strong> so we can notify you when AbleTap is ready.</li>
     <li><strong>If you email us</strong> at info@abletap.io, we receive your email address and message so we can reply.</li>
-    <li><strong>Automatically:</strong> our hosting provider and privacy-first analytics collect standard technical information — browser and device type, referring page, and aggregated page-view events — to keep the site secure and understand how it performs. We do not use advertising trackers.</li>
+    <li><strong>Automatically:</strong> our hosting provider (Netlify) and product analytics (PostHog, on the homepage and the early-access page) collect standard technical information — browser and device type, referring page, and page-view events — to keep the site secure and understand how it performs. PostHog loads on those pages without waiting for the advertising-cookie choice. TODO: confirm the PostHog cookie and storage keys, whether it should wait for the same choice, and how long those events are kept.</li>
+    <li><strong>Waitlist campaign fields:</strong> if you join the waitlist, the form can include the page path you landed on and any utm_source, utm_medium, utm_campaign, utm_content, and utm_term values from the link you opened. Those values are stored in this browser tab first. They are not your email address.</li>
   </ul>
 
   <h2>How we use information</h2>
@@ -64,19 +65,37 @@
     <li>To add you to the launch waitlist and notify you when AbleTap opens</li>
     <li>To respond to messages you send us</li>
     <li>To operate, secure, and improve the AbleTap.io website</li>
+    <li>To count advertising visits, only if you accept and only when an advertising ID is configured</li>
+    <li>After a confirmed waitlist signup, to record a PostHog event named waitlist_signup with the campaign fields above. That event does not include your email address.</li>
     <li>To comply with legal obligations</li>
   </ul>
 
   <h2>Service providers</h2>
-  <p>To run this website we rely on a small number of processors, currently <strong>Netlify</strong> (website hosting and waitlist form handling) and <strong>PostHog</strong> (privacy-first product analytics). We do not sell your personal information, and we do not share it with third parties for their own advertising or marketing.</p>
+  <p>To run this website we rely on <strong>Netlify</strong> (website hosting and waitlist form handling) and <strong>PostHog</strong> (product analytics). We do not send your waitlist email to Meta or LinkedIn. If you accept advertising cookies, and only when an ID is configured, Meta and LinkedIn receive a page-view measurement, which they may use under their own policies. TODO: legal review of whether that page view counts as a sale or share under US state privacy laws before any paid campaign.</p>
+
+  <h2>Cookies and advertising measurement</h2>
+  <p>Two kinds of measurement can run on this website.</p>
+  <ul>
+    <li><strong>PostHog</strong> loads on the homepage and on /early-access/ for page views. It does not wait for the advertising-cookie banner. After a waitlist signup returns a successful response, the site can send one PostHog event, <strong>waitlist_signup</strong>, with utm_source, utm_medium, utm_campaign, utm_content, utm_term, and the landing path. The email address you typed is not a property of that event. TODO: confirm PostHog retention and the storage keys it sets.</li>
+    <li><strong>Meta Pixel and the LinkedIn Insight Tag</strong> load only after you choose Accept, and only when the matching ID is set in the site config. With the IDs empty, Accept does not load either tag. The Meta tag sends a PageView only. We do not send custom events, and we do not send health, disability, or diagnosis information. The LinkedIn tag counts the page visit. We do not add a tag for browsers that have JavaScript turned off, so declining or blocking scripts keeps them off.</li>
+  </ul>
+  <p>If you choose Decline, we store that choice in local storage on your device under the key <strong>abletap_consent</strong> and we do not load the Meta or LinkedIn tags. Accept is stored the same way. Use <strong>Cookie choices</strong> in the footer to change it. Clearing site data for abletap.io removes the choice.</p>
+  <p>When those tags load, they receive the page URL, the referring URL, and technical browser data those companies use to count a visit, and they may set their own cookies. TODO: legal review of the exact Meta and LinkedIn cookie names and of how long each company keeps a page view. We do not control those retention periods.</p>
+  <p>Campaign parameters (utm_source, utm_medium, utm_campaign, utm_content, utm_term) and the landing path are saved in session storage under <strong>abletap_utm_v1</strong> for that tab, whether or not you accept advertising cookies. They stay on your device until the tab session ends. If you submit the waitlist form, those fields are included in the Netlify form submission. They are not added to the Meta or LinkedIn tags. TODO: confirm how long Netlify keeps waitlist submissions, including those campaign fields.</p>
+  <p>To opt out of advertising tags, choose Decline, or open Cookie choices and choose Decline. You can also use the controls Meta and LinkedIn offer. TODO: confirm the current opt-out pages before treating any single URL as the only method. As of this draft, Meta describes ad controls in its help center, and LinkedIn has guest controls for advertising. Those pages can change.</p>
 
   <h2>How long we keep information</h2>
-  <p>We keep your waitlist email until launch and a reasonable period afterward, and email correspondence for as long as needed to handle your request. You can ask us to remove you from the waitlist or delete your correspondence at any time.</p>
+  <p>We keep your waitlist email until launch and a reasonable period afterward, and email correspondence for as long as needed to handle your request. You can ask us to remove you from the waitlist or delete your correspondence at any time. Your advertising-cookie choice stays in this browser until you change it or clear site data. TODO: confirm Netlify's retention for waitlist submissions and the campaign fields stored with them.</p>
 
   <h2>Your rights</h2>
-  <p>Depending on where you live, you may have the right to access, correct, delete, or export the personal information we hold about you, or to opt out of communications. To make a request, email <a href="mailto:info@abletap.io">info@abletap.io</a> and we'll respond within the timeframe required by applicable law. You can unsubscribe from waitlist emails at any time.</p>
+  <p>Depending on where you live, you may have the right to access, correct, delete, or export the personal information we hold about you, or to opt out of communications. To make a request, email <a href="mailto:info@abletap.io">info@abletap.io</a> and we'll respond within the timeframe required by applicable law. You can unsubscribe from waitlist emails at any time. You can decline advertising tags, or change that choice, with Cookie choices in the footer.</p>
 
-  <h2>Children's privacy</h2>
+  <h2 id="text-messages">Text messages (SMS)</h2>
+<p>AbleTap's in-app texting and our support line are run by Chill, LLC. When someone texts us, or an AbleTap user texts a contact their caregiver added, we handle the mobile phone number and the message only to deliver the conversation. Our messaging provider, Twilio, delivers these messages on our behalf.</p>
+<p><strong>We do not sell, rent, or share your mobile phone number or your text-message opt-in data and consent with any third parties or affiliates for their marketing or promotional purposes.</strong> Text-messaging originator opt-in data and consent are not shared with any third parties, except the service providers that deliver our messages.</p>
+<p>Reply <strong>STOP</strong> at any time to stop receiving texts, or <strong>HELP</strong> for help, or email <a href="mailto:info@abletap.io">info@abletap.io</a>. See the text-messaging section of our <a href="/terms#text-messaging">Terms</a>.</p>
+
+<h2>Children's privacy</h2>
   <p>The AbleTap.io website and waitlist are intended for adults — parents, caregivers, family members, and professionals. We do not knowingly collect information from children through this website. AbleTap is designed to support people with disabilities, some of whom may be minors; when the app launches we will provide age-appropriate protections and caregiver controls, described in the product's Privacy Policy. If you believe a child has provided us information through this website, email info@abletap.io and we will delete it promptly.</p>
 
   <h2>Security</h2>
@@ -91,6 +110,8 @@
   <h2>Contact us</h2>
   <p>For privacy questions or to exercise your rights, write to <a href="mailto:info@abletap.io">info@abletap.io</a>.</p>
 </div>
-<footer>© 2026 AbleTap.io · <a href="https://chill.support">A Chill, LLC company → chill.support</a> · <a href="/">Home</a> · <a href="/support.html">Support</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></footer>
+<footer>© 2026 AbleTap.io · <a href="https://chill.support">A Chill, LLC company → chill.support</a> · <a href="/">Home</a> · <a href="/support.html">Support</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <button type="button" data-cookie-choices>Cookie choices</button></footer>
+<script src="/assets/tracking-config.js"></script>
+<script src="/assets/consent.js"></script>
 </body>
 </html>
