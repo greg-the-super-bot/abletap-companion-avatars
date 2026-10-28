@@ -6,10 +6,11 @@ Update THIS FILE FIRST when what we can say changes.
 
 ## What we can say (Chris, 2026-10-18)
 - AbleTap is coming soon; families join the waitlist. No pre-order, no price, no App Store listing yet.
-- Streaming: Disney+, Hulu, Paramount+ and Prime Video may be named **in plain text only** (no logos, no badges). They are the services that pass on the TV box today.
+- Streaming: name **no** streaming services (Chris, 2026-10-23, #5). TV is "on our roadmap" only.
 - Never name Netflix or YouTube as working, Roku or Fire TV as supported, or compare AbleTap with TouchChat or Proloquo2Go.
 - No "Works with" badges.
 - Ava and the companions are not live conversation yet: never "talk to Ava", "talks with you" or "live".
+- Ava is coming later: her button previews her voice; never "Hear Ava" as if she is in the app today (Chris, 2026-10-27).
 - No health/medical app category or pre-order schema.
 
 ```yaml
@@ -18,6 +19,10 @@ allowed_prices: []
 banned_patterns:
   - "netflix"
   - "youtube"
+  - "disney"
+  - "hulu"
+  - "paramount"
+  - "prime video"
   - "roku"
   - "fire ?tv"
   - "touchchat"
@@ -26,6 +31,7 @@ banned_patterns:
   - "talk to (ava|sunny|alex|buzz|grace)"
   - "talks with you"
   - "ava is live"
+  - "hear ava"
   - "preorder"
   - "pre-order"
   - "healthapplication"
