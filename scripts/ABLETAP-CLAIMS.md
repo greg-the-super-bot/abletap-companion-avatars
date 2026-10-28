@@ -10,7 +10,7 @@ Update THIS FILE FIRST when what we can say changes.
 - Never name Netflix or YouTube as working, Roku or Fire TV as supported, or compare AbleTap with TouchChat or Proloquo2Go.
 - No "Works with" badges.
 - Ava and the companions are not live conversation yet: never "talk to Ava", "talks with you" or "live".
-- Ava is coming later: her button previews her voice; never "Hear Ava" as if she is in the app today (Chris, 2026-10-27).
+- Ava's button says "Preview Ava's voice" and plays her real ElevenLabs clip (`assets/companions/audio/ava.mp3`), never the browser voice. Not "Hear Ava" (Chris, 2026-10-27).
 - No health/medical app category or pre-order schema.
 
 ```yaml
