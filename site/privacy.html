@@ -46,17 +46,45 @@
 <div class="topbar"><div class="in"><a href="/" style="display:flex;align-items:center;gap:10px;color:inherit"><img class="mark" src="/brand/abletap-mark.svg?v=20261010" width="32" height="32" alt=""><span class="wordmark">AbleTap<span style="color:var(--purple)">.io</span></span></a></div></div>
 <div class="doc">
   <h1>Privacy Policy</h1>
-  <p class="meta">Last updated: October 21, 2026</p>
+  <p class="meta">Last updated: October 30, 2026</p>
 
-  <p class="lead">AbleTap ("AbleTap," "we," "us," or "our") is a product of Chill, LLC, an Arkansas limited liability company. This Privacy Policy explains what information is collected when you visit <strong>AbleTap.io</strong> and join our launch waitlist.</p>
+  <p class="lead">AbleTap ("AbleTap," "we," "us," or "our") is a product of Chill, LLC, an Arkansas limited liability company. This Privacy Policy explains what information is handled when you use the <strong>AbleTap app</strong>, visit <strong>AbleTap.io</strong>, or join our waitlist.</p>
 
-  <div class="note">AbleTap is <strong>coming soon</strong>. This policy covers the current AbleTap.io website and waitlist. When the AbleTap app launches, a fuller product Privacy Policy will describe the information the app itself handles (accounts, communication and AAC content, and device usage) and the protections around it. AbleTap is also a product of Chill, LLC — see <a href="https://chill.support/privacy.html">Chill's privacy policy</a>.</div>
-
-  <h2>Information we collect</h2>
+  <h2>The AbleTap app</h2>
+  <p>Most of AbleTap works on your device. The talking board, the words a person taps, word suggestions, and their on-device voice stay on the iPad and are not sent to us. Your board and show settings can sync through your own iCloud account. The items below are sent to servers only when you use the feature named.</p>
   <ul>
+    <li><strong>Name:</strong> the names of family members you add, and your name if you set up a family.</li>
+    <li><strong>User ID:</strong> an account ID from Sign in with Apple, or an anonymous ID for a paired iPad.</li>
+    <li><strong>Voice clips:</strong> audio of family messages, including voice messages you record, stored so the other people in the conversation can play them.</li>
+    <li><strong>Family message text:</strong> the words of messages sent in family conversations.</li>
+    <li><strong>Photos:</strong> member photos you choose to add to your family.</li>
+    <li><strong>Phone number:</strong> the number dialed when an in-app call is placed. Twilio connects the call and keeps a record of it.</li>
+    <li><strong>Device ID:</strong> a push token, so family messages can reach your device.</li>
+    <li><strong>Search text:</strong> what you type when searching for a show. It goes through our server to YouTube and is not linked to your account.</li>
+    <li><strong>Communication support information:</strong> which family member uses AbleTap to communicate. Because this could suggest a disability, we treat it as sensitive and use it only to run the app.</li>
+  </ul>
+  <p>We use this information only to run the features above. We do not sell it, use it for advertising, or track you across other apps and websites. Family messages are visible to the people in that conversation and, in some cases, to a family's Owner, as explained in the app.</p>
+  <h3>Service providers for the app</h3>
+  <ul>
+    <li><strong>Supabase:</strong> stores family accounts, messages, clips and photos.</li>
+    <li><strong>Apple:</strong> Sign in with Apple, push notifications and iCloud sync.</li>
+    <li><strong>Twilio:</strong> in-app calls.</li>
+    <li><strong>Netlify:</strong> runs the small server that connects calls and show search.</li>
+    <li><strong>YouTube (Google):</strong> show search.</li>
+    <li><strong>ElevenLabs:</strong> only if your family adds its own ElevenLabs key. Text to be spoken, and conversations with a custom voice agent, then go to ElevenLabs under your own account.</li>
+    <li><strong>Amazon Web Services:</strong> only if your family turns on AbleShout. The spoken request goes to your home's linked Alexa service.</li>
+  </ul>
+  <h3>Deleting your account and data</h3>
+  <p>You can delete your account in the app: Family settings, then Delete my account. Your account, your messages, your voice clips and your photo are deleted, and your Sign in with Apple link is removed.</p>
+  <p>If you are a family's only Owner, the family is frozen for 30 days instead. During that time nobody can see its messages or clips, and you can sign back in to restore it. After 30 days your account and the whole family are deleted, including messages, clips, photos and paired iPads. Messages and clips otherwise stay until they, the account, or the family are deleted.</p>
+  <p>The Remote and the talking board do not need an account. Their settings stay on your device or in your iCloud, and deleting the app removes what is stored on the device.</p>
+
+  <h2>The AbleTap.io website and waitlist</h2>
+
+<ul>
     <li><strong>Waitlist sign-up:</strong> when you join the launch waitlist, you provide your <strong>email address</strong> so we can notify you when AbleTap is ready.</li>
     <li><strong>If you email us</strong> at info@abletap.io, we receive your email address and message so we can reply.</li>
-    <li><strong>Automatically:</strong> our hosting provider (Netlify) and product analytics (PostHog, on the homepage and the early-access page) collect standard technical information — browser and device type, referring page, and page-view events — to keep the site secure and understand how it performs. PostHog loads on those pages without waiting for the advertising-cookie choice. TODO: confirm the PostHog cookie and storage keys, whether it should wait for the same choice, and how long those events are kept.</li>
+    <li><strong>Automatically:</strong> our hosting provider (Netlify) and product analytics (PostHog, on the homepage and the early-access page) collect standard technical information — browser and device type, referring page, and page-view events — to keep the site secure and understand how it performs. PostHog loads on those pages without waiting for the advertising-cookie choice.</li>
     <li><strong>Waitlist campaign fields:</strong> if you join the waitlist, the form can include the page path you landed on and any utm_source, utm_medium, utm_campaign, utm_content, and utm_term values from the link you opened. Those values are stored in this browser tab first. They are not your email address.</li>
   </ul>
 
@@ -71,21 +99,21 @@
   </ul>
 
   <h2>Service providers</h2>
-  <p>To run this website we rely on <strong>Netlify</strong> (website hosting and waitlist form handling) and <strong>PostHog</strong> (product analytics). We do not send your waitlist email to Meta or LinkedIn. If you accept advertising cookies, and only when an ID is configured, Meta and LinkedIn receive a page-view measurement, which they may use under their own policies. TODO: legal review of whether that page view counts as a sale or share under US state privacy laws before any paid campaign.</p>
+  <p>To run this website we rely on <strong>Netlify</strong> (website hosting and waitlist form handling) and <strong>PostHog</strong> (product analytics). We do not send your waitlist email to Meta or LinkedIn. If you accept advertising cookies, and only when an ID is configured, Meta and LinkedIn receive a page-view measurement, which they may use under their own policies.</p>
 
   <h2>Cookies and advertising measurement</h2>
   <p>Two kinds of measurement can run on this website.</p>
   <ul>
-    <li><strong>PostHog</strong> loads on the homepage and on /early-access/ for page views. It does not wait for the advertising-cookie banner. After a waitlist signup returns a successful response, the site can send one PostHog event, <strong>waitlist_signup</strong>, with utm_source, utm_medium, utm_campaign, utm_content, utm_term, and the landing path. The email address you typed is not a property of that event. TODO: confirm PostHog retention and the storage keys it sets.</li>
+    <li><strong>PostHog</strong> loads on the homepage and on /early-access/ for page views. It does not wait for the advertising-cookie banner. After a waitlist signup returns a successful response, the site can send one PostHog event, <strong>waitlist_signup</strong>, with utm_source, utm_medium, utm_campaign, utm_content, utm_term, and the landing path. The email address you typed is not a property of that event.</li>
     <li><strong>Meta Pixel and the LinkedIn Insight Tag</strong> load only after you choose Accept, and only when the matching ID is set in the site config. With the IDs empty, Accept does not load either tag. The Meta tag sends a PageView only. We do not send custom events, and we do not send health, disability, or diagnosis information. The LinkedIn tag counts the page visit. We do not add a tag for browsers that have JavaScript turned off, so declining or blocking scripts keeps them off.</li>
   </ul>
   <p>If you choose Decline, we store that choice in local storage on your device under the key <strong>abletap_consent</strong> and we do not load the Meta or LinkedIn tags. Accept is stored the same way. Use <strong>Cookie choices</strong> in the footer to change it. Clearing site data for abletap.io removes the choice.</p>
-  <p>When those tags load, they receive the page URL, the referring URL, and technical browser data those companies use to count a visit, and they may set their own cookies. TODO: legal review of the exact Meta and LinkedIn cookie names and of how long each company keeps a page view. We do not control those retention periods.</p>
-  <p>Campaign parameters (utm_source, utm_medium, utm_campaign, utm_content, utm_term) and the landing path are saved in session storage under <strong>abletap_utm_v1</strong> for that tab, whether or not you accept advertising cookies. They stay on your device until the tab session ends. If you submit the waitlist form, those fields are included in the Netlify form submission. They are not added to the Meta or LinkedIn tags. TODO: confirm how long Netlify keeps waitlist submissions, including those campaign fields.</p>
-  <p>To opt out of advertising tags, choose Decline, or open Cookie choices and choose Decline. You can also use the controls Meta and LinkedIn offer. TODO: confirm the current opt-out pages before treating any single URL as the only method. As of this draft, Meta describes ad controls in its help center, and LinkedIn has guest controls for advertising. Those pages can change.</p>
+  <p>When those tags load, they receive the page URL, the referring URL, and technical browser data those companies use to count a visit, and they may set their own cookies.</p>
+  <p>Campaign parameters (utm_source, utm_medium, utm_campaign, utm_content, utm_term) and the landing path are saved in session storage under <strong>abletap_utm_v1</strong> for that tab, whether or not you accept advertising cookies. They stay on your device until the tab session ends. If you submit the waitlist form, those fields are included in the Netlify form submission. They are not added to the Meta or LinkedIn tags.</p>
+  <p>To opt out of advertising tags, choose Decline, or open Cookie choices and choose Decline. You can also use the controls Meta and LinkedIn offer.</p>
 
   <h2>How long we keep information</h2>
-  <p>We keep your waitlist email until launch and a reasonable period afterward, and email correspondence for as long as needed to handle your request. You can ask us to remove you from the waitlist or delete your correspondence at any time. Your advertising-cookie choice stays in this browser until you change it or clear site data. TODO: confirm Netlify's retention for waitlist submissions and the campaign fields stored with them.</p>
+  <p>We keep your waitlist email until launch and a reasonable period afterward, and email correspondence for as long as needed to handle your request. You can ask us to remove you from the waitlist or delete your correspondence at any time. Your advertising-cookie choice stays in this browser until you change it or clear site data.</p>
 
   <h2>Your rights</h2>
   <p>Depending on where you live, you may have the right to access, correct, delete, or export the personal information we hold about you, or to opt out of communications. To make a request, email <a href="mailto:info@abletap.io">info@abletap.io</a> and we'll respond within the timeframe required by applicable law. You can unsubscribe from waitlist emails at any time. You can decline advertising tags, or change that choice, with Cookie choices in the footer.</p>
@@ -96,13 +124,12 @@
 <p>Reply <strong>STOP</strong> at any time to stop receiving texts, or <strong>HELP</strong> for help, or email <a href="mailto:info@abletap.io">info@abletap.io</a>. See the text-messaging section of our <a href="/terms#text-messaging">Terms</a>.</p>
 
 <h2>Children's privacy</h2>
-  <p>The AbleTap.io website and waitlist are intended for adults — parents, caregivers, family members, and professionals. We do not knowingly collect information from children through this website. AbleTap is designed to support people with disabilities, some of whom may be minors; when the app launches we will provide age-appropriate protections and caregiver controls, described in the product's Privacy Policy. If you believe a child has provided us information through this website, email info@abletap.io and we will delete it promptly.</p>
-
+  <p>The AbleTap.io website and waitlist are intended for adults: parents, caregivers, family members and professionals. We do not knowingly collect information from children through this website. In the app, an adult Owner sets up the family and adds any child. AbleTap is designed to support people with disabilities, some of whom may be minors. A parent or guardian can ask us what is stored about their child, and can delete it, by writing to info@abletap.io.</p>
   <h2>Security</h2>
   <p>We use industry-standard safeguards, including encryption in transit (TLS). No system is perfectly secure, and we cannot guarantee absolute security.</p>
 
   <h2>International visitors</h2>
-  <p>AbleTap.io is operated from the United States. If you visit from outside the U.S., your information will be transferred to and processed in the United States.</p>
+  <p>AbleTap is operated from the United States. If you use the app or visit from outside the U.S., your information will be transferred to and processed in the United States.</p>
 
   <h2>Changes to this policy</h2>
   <p>We may update this Privacy Policy from time to time. When we do, we'll update the "Last updated" date above.</p>
