@@ -347,7 +347,7 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
       <div style="text-align:center;max-width:780px;margin:0 auto 50px;">
         <span style="display:inline-block;font-weight:700;font-size:0.78rem;letter-spacing:1.6px;text-transform:uppercase;color:#F4B96B;margin-bottom:16px;">Meet Your Companion</span>
         <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2rem,4vw,3.1rem);line-height:1.08;color:#FAF5EF;margin:0 0 20px;">Choose the voice that feels like <span style="font-style:italic;font-weight:600;color:#A98BF2;">home</span></h2>
-        <p style="font-size:clamp(1.06rem,1.4vw,1.2rem);color:rgba(246,240,255,0.92);margin:0;">Every person is different. Every family is different. Coming later: AbleTap companions in different personalities. You'll pick the one that fits and switch anytime you like.</p>
+        <p style="font-size:clamp(1.06rem,1.4vw,1.2rem);color:rgba(246,240,255,0.92);margin:0;">Every person is different. Pick the companion whose face and voice fit, and switch anytime you like.</p>
       </div>
 
       <!-- Featured Ava -->
@@ -357,66 +357,30 @@ import('https://esm.sh/posthog-js@1').then(function(m){var ph=m.default;ph.init(
           <span class="at-ava" data-c="ava"><img alt="Ava, AbleTap companion" src="assets/companions/ava/closed.png" width="512" height="512"></span>
         </div>
         <div style="font-family:'Fraunces',serif;font-weight:600;font-size:2.1rem;color:#FAF5EF;">Ava</div>
-        <div style="font-size:0.8rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#DCCBFF;margin-bottom:18px;">Warm · Maternal</div>
-        <p style="font-size:0.98rem;color:rgba(246,240,255,0.92);max-width:450px;margin:0 auto 24px;">Ava is the warm, friendly helper at the heart of AbleTap.io. Patient and gentle, she's designed to meet every person where they are.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin-bottom:28px;">
-          <span style="font-size:0.82rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.07);border:1px solid rgba(169,139,242,0.3);padding:7px 15px;border-radius:999px;">💜 Warm &amp; Maternal</span>
-          <span style="font-size:0.82rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.07);border:1px solid rgba(169,139,242,0.3);padding:7px 15px;border-radius:999px;">🌸 Endlessly Gentle</span>
-          <span style="font-size:0.82rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.07);border:1px solid rgba(169,139,242,0.3);padding:7px 15px;border-radius:999px;">✨ Always Encouraging</span>
-          <span style="font-size:0.82rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.07);border:1px solid rgba(169,139,242,0.3);padding:7px 15px;border-radius:999px;">🤗 Feels Like Family</span>
-        </div>
         <button data-name="Ava" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:1rem;font-weight:700;padding:15px 38px;border:none;border-radius:999px;cursor:pointer;background:linear-gradient(135deg,#6B4CE0,#8A5BE6);color:#fff;box-shadow:0 16px 36px -12px rgba(107,76,224,0.8);" onMouseOver="this.style.transform='translateY(-2px)'" onMouseOut="this.style.transform='translateY(0)'">💜 Preview Ava’s voice</button>
       </div>
 
-      <p style="text-align:center;color:rgba(246,240,255,0.9);font-size:0.85rem;margin:0 0 34px;">Or choose a different personality below ↓</p>
+      <p style="text-align:center;color:rgba(246,240,255,0.9);font-size:0.85rem;margin:0 0 34px;">Or choose a different companion below ↓</p>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;">
         <div data-companion-card style="background:rgba(255,255,255,0.045);border:1px solid rgba(169,139,242,0.2);border-radius:24px;padding:34px 28px;text-align:center;">
           <div style="width:98px;height:98px;margin:0 auto 16px;border-radius:50%;padding:4px;background:conic-gradient(from 200deg,#A98BF2,#F5926A,#F4B96B,#A98BF2);"><span class="at-ava" data-c="sunny"><img alt="Sunny, AbleTap companion" src="assets/companions/sunny/closed.png" width="512" height="512"></span></div>
           <div style="font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:#FAF5EF;">Sunny</div>
-          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#F4B96B;margin-bottom:16px;">Kids &amp; Young Users</div>
-          <p style="font-size:0.92rem;color:rgba(246,240,255,0.92);margin:0 0 20px;">Bright, bubbly, and endlessly encouraging. Sunny celebrates every single win — no matter how small. She speaks simply, cheers loudly, and makes learning feel like an adventure.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:22px;">
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🎉 Celebrates Wins</span>
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🎨 Visual &amp; Fun</span>
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">💛 Super Patient</span>
-          </div>
           <button data-name="Sunny" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">🌟 Hear Sunny say hello</button>
         </div>
         <div data-companion-card style="background:rgba(255,255,255,0.045);border:1px solid rgba(169,139,242,0.2);border-radius:24px;padding:34px 28px;text-align:center;">
           <div style="width:98px;height:98px;margin:0 auto 16px;border-radius:50%;padding:4px;background:conic-gradient(from 200deg,#A98BF2,#F5926A,#F4B96B,#A98BF2);"><span class="at-ava" data-c="alex"><img alt="Alex, AbleTap companion" src="assets/companions/alex/closed.png" width="512" height="512"></span></div>
           <div style="font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:#FAF5EF;">Alex</div>
-          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#F4B96B;margin-bottom:16px;">Adults · Professional</div>
-          <p style="font-size:0.92rem;color:rgba(246,240,255,0.92);margin:0 0 20px;">Calm, clear, and always respectful. Alex treats every user like the capable adult they are — no fuss, no condescension. Just steady, reliable help, every time.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:22px;">
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🎯 Clear &amp; Direct</span>
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🤝 Respectful</span>
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">⚡ Efficient</span>
-          </div>
           <button data-name="Alex" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">💼 Hear Alex say hello</button>
         </div>
         <div data-companion-card style="background:rgba(255,255,255,0.045);border:1px solid rgba(169,139,242,0.2);border-radius:24px;padding:34px 28px;text-align:center;">
           <div style="width:98px;height:98px;margin:0 auto 16px;border-radius:50%;padding:4px;background:conic-gradient(from 200deg,#A98BF2,#F5926A,#F4B96B,#A98BF2);"><span class="at-ava" data-c="buzz"><img alt="Buzz, AbleTap companion" src="assets/companions/buzz/closed.png" width="512" height="512"></span></div>
           <div style="font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:#FAF5EF;">Buzz</div>
-          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#F4B96B;margin-bottom:16px;">Comedic · Playful</div>
-          <p style="font-size:0.92rem;color:rgba(246,240,255,0.92);margin:0 0 20px;">Tech being annoying? Buzz makes it funny first, then fixes it. Genuinely hilarious, always warm, never at anyone's expense. Perfect for anyone who needs a laugh with their help.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:22px;">
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">😂 Actually Funny</span>
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🎭 Big Personality</span>
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">💪 Still Gets It Done</span>
-          </div>
           <button data-name="Buzz" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">😄 Hear Buzz say hello</button>
         </div>
         <div data-companion-card style="background:rgba(255,255,255,0.045);border:1px solid rgba(169,139,242,0.2);border-radius:24px;padding:34px 28px;text-align:center;">
           <div style="width:98px;height:98px;margin:0 auto 16px;border-radius:50%;padding:4px;background:conic-gradient(from 200deg,#A98BF2,#F5926A,#F4B96B,#A98BF2);"><span class="at-ava" data-c="grace"><img alt="Grace, AbleTap companion" src="assets/companions/grace/closed.png" width="512" height="512"></span></div>
           <div style="font-family:'Fraunces',serif;font-weight:600;font-size:1.5rem;color:#FAF5EF;">Grace</div>
-          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.8px;text-transform:uppercase;color:#F4B96B;margin-bottom:16px;">Seniors · Unhurried</div>
-          <p style="font-size:0.92rem;color:rgba(246,240,255,0.92);margin:0 0 20px;">Warm, patient, and never in a rush. Grace takes it one gentle step at a time, checks in along the way, and never makes anyone feel behind. Like help from someone who truly cares.</p>
-          <div style="display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-bottom:22px;">
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🕐 Unhurried</span>
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">💚 Warm &amp; Kind</span>
-            <span style="font-size:0.74rem;font-weight:700;color:#F6F0FF;background:rgba(255,255,255,0.06);border:1px solid rgba(169,139,242,0.22);padding:5px 11px;border-radius:999px;">🔄 Never Frustrated</span>
-          </div>
           <button data-name="Grace" onclick="atSpeak(this)" style="font-family:'Atkinson Hyperlegible',sans-serif;font-size:0.92rem;font-weight:700;padding:12px 26px;border:1.5px solid rgba(169,139,242,0.5);border-radius:999px;cursor:pointer;background:rgba(169,139,242,0.1);color:#FAF5EF;" onMouseOver="this.style.background='rgba(169,139,242,0.22)'" onMouseOut="this.style.background='rgba(169,139,242,0.1)'">🍵 Hear Grace say hello</button>
         </div>
       </div>
